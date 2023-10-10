@@ -428,3 +428,14 @@ video {
 	height: 0;
 	display: none !important;
 }
+
+/* contact text start*/
+.contact-text {
+	color: #1e1e1e;
+	font-family: Inter;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 150%;
+}
+/* contact text end */

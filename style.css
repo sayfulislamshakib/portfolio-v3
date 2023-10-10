@@ -13,7 +13,7 @@ body,
 body {
 	min-height: 100vh;
 	width: auto;
-	background-color: #fff;
+	background-color: #fafafa;
 	align-items: center;
 	display: flex;
 	flex-direction: column;

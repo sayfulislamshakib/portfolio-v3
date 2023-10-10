@@ -39,7 +39,7 @@ body {
 	height: min-content;
 	justify-content: flex-start;
 	overflow: visible;
-	padding: 80px 0 0;
+	padding: 80px 0;
 	position: relative;
 	width: min-content;
 	z-index: 1;
@@ -415,7 +415,7 @@ body {
 video {
 	border: 1px solid #e5e5e5;
 	height: auto;
-	width: 688px;
+	width: 100%;
 }
 /* Hide the default video controls */
 #autoplay-video::-webkit-media-controls,
@@ -432,12 +432,10 @@ video {
 /* contact text start*/
 .contact-text {
 	color: #1e1e1e;
-	font-family: Inter;
-	font-size: 36px;
-	font-style: normal;
+	font-family: "Inter", sans-serif;
+	font-size: 24px; /* Adjust the font size as needed */
 	font-weight: 600;
 	line-height: 150%;
-	width: 688px;
-	flex-wrap: wrap;
+	width: 100%; /* Ensure it spans the entire width */
 }
 /* contact text end */

@@ -120,10 +120,22 @@ body {
 	border-left: none;
 	height: 300px;
 }
-
+.text-normal {
+	font-size: 16px;
+	font-weight: 400px;
+	color: #4f4f4f;
+}
 .heighlight {
 	font-size: 16px;
 	font-weight: 700;
+}
+.heighlight-md {
+	font-size: 16px;
+	font-weight: 500;
+}
+.heighlight-sm {
+	font-size: 16px;
+	font-weight: 600;
 }
 .bio-text {
 	color: #5c5c5c;

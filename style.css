@@ -335,3 +335,16 @@ video {
 	width: 100%; /* Ensure it spans the entire width */
 }
 /* contact text end */
+
+/* animation */
+.animation-container {
+	position: relative;
+	opacity: 0; /* Start with opacity 0 (hidden) */
+	transform: translateY(20px); /* Start 20px below its normal position */
+	transition: opacity 1s ease, transform 1s ease;
+}
+
+.animation-container.animate {
+	opacity: 1;
+	transform: translateY(0);
+}

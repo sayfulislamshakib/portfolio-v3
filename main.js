@@ -63,3 +63,23 @@ window.addEventListener("scroll", updateActiveTab);
 
 // Call the updateActiveTab function once to initialize the active tab
 updateActiveTab();
+
+// animation
+function playAnimation() {
+	const animationContainer = document.querySelector(".animation-container");
+	animationContainer.classList.add("animate");
+}
+
+// Function to reset the animation
+function resetAnimation() {
+	const animationContainer = document.querySelector(".animation-container");
+	animationContainer.classList.remove("animate");
+	setTimeout(playAnimation, 100); // Delay for a moment and then start the animation again
+}
+
+document.addEventListener("DOMContentLoaded", playAnimation);
+
+// Reset the animation whenever the animation ends
+document
+	.querySelector(".animation-container")
+	.addEventListener("animationend", resetAnimation);

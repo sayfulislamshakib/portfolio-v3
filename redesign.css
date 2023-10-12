@@ -1,0 +1,36 @@
+.redesign-text {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+.redesign-paragraph-text {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 190%;
+	color: #555555;
+}
+.redesign-body {
+	align-content: flex-start;
+	align-items: flex-start;
+	display: flex;
+	flex: none;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	gap: 16px;
+	height: min-content;
+	justify-content: flex-start;
+	max-width: 688px;
+	overflow: visible;
+	padding: 0;
+	position: relative;
+	transform: perspective(1200px);
+	width: 100%;
+}
+.redesign-thumbnail img {
+	flex: none;
+	height: 382.08px;
+	overflow: hidden;
+	position: relative;
+	width: 688px;
+	border-radius: 4px;
+}

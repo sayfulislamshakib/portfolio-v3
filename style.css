@@ -5,14 +5,6 @@ body,
 	padding: 0;
 	box-sizing: border-box;
 }
-/* For emoji support */
-@font-face {
-	font-family: "Noto Emoji";
-	src: local("Noto Emoji"),
-		url(https://fonts.gstatic.com/s/notoemoji/v15.0/NotoEmoji-Regular.ttf)
-			format("truetype");
-}
-/* For emoji support end */
 * {
 	scroll-behavior: smooth;
 	box-sizing: border-box;

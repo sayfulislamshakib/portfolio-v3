@@ -1,13 +1,16 @@
 .about-text {
 	display: flex;
 	flex-direction: column;
-	gap: 24px;
+	gap: 16px;
 }
 .about-paragraph-text {
 	font-weight: 400;
 	font-size: 16px;
-	line-height: 180%;
+	line-height: 190%;
 	color: #555555;
+}
+.about-bold-text {
+	font-weight: 600;
 }
 .image-style {
 	margin-top: 48px;

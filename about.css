@@ -1,4 +1,10 @@
+.about-text {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
 .about-paragraph-text {
+	font-weight: 400;
 	font-size: 16px;
 	line-height: 180%;
 	color: #555555;

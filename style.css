@@ -391,12 +391,6 @@ body {
 	font-size: 16px;
 	color: #9e9e9e;
 }
-.about-text {
-	display: flex;
-	flex-direction: column;
-	gap: 32px;
-	color: #1e1e1e;
-}
 .back {
 	transition: 0.3s;
 	background-color: #f0f0f0;

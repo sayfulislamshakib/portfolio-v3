@@ -6,6 +6,7 @@
 
 /* The Modal (background) */
 #image-viewer {
+	overflow: hidden;
 	cursor: zoom-out;
 	display: None;
 	position: fixed;
@@ -20,6 +21,7 @@
 	background-color: #1e1e1eab;
 }
 .modal-content {
+	overflow: hidden;
 	cursor: zoom-out;
 	margin: auto;
 	display: block;

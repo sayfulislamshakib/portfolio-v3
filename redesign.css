@@ -74,3 +74,16 @@
 	position: relative;
 	width: min-content;
 }
+
+/* Points Style */
+.points ul li {
+	font-size: 16px;
+	line-height: 180%;
+	font-weight: 400;
+	color: #4f4f4f;
+	list-style-type: square;
+	margin-top: 16px;
+}
+.points-highlight {
+	font-weight: 500;
+}

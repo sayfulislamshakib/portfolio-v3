@@ -1,25 +1,12 @@
-/* Redesign Text Styles */
-.redesign-text {
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
-}
-
-/* Redesign Paragraph Text Styles */
-.redesign-paragraph-text {
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 190%;
-	color: #555555;
-}
-
-/* Redesign Body Styles */
 .redesign-body {
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
 	align-content: flex-start;
 	align-items: flex-start;
+	display: flex;
+	flex: none;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	gap: 16px;
+	height: min-content;
 	justify-content: flex-start;
 	max-width: 688px;
 	overflow: visible;
@@ -28,13 +15,62 @@
 	transform: perspective(1200px);
 	width: 100%;
 }
-
-/* Redesign Thumbnail Styles */
+/* Post Thumbnail Styles */
 .redesign-thumbnail img {
 	flex: none;
 	height: 382.08px;
+	width: 688px;
 	overflow: hidden;
 	position: relative;
-	width: 688px;
 	border-radius: 4px;
+}
+/* Post Text Styles */
+.redesign-text {
+	align-content: flex-start;
+	align-items: flex-start;
+	display: flex;
+	flex: none;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	height: min-content;
+	justify-content: space-between;
+	max-width: 688px;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+/* Post Left Text Styles */
+.redesign-left-text {
+	align-content: flex-start;
+	align-items: flex-start;
+	display: flex;
+	flex: 1 0 0px;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	gap: 4px;
+	height: min-content;
+	justify-content: flex-start;
+	max-width: 688px;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	width: 1px;
+}
+/* Post Date Styles */
+.redesign-date {
+	align-content: center;
+	align-items: center;
+	display: flex;
+	flex: none;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 16px;
+	height: min-content;
+	justify-content: flex-start;
+	max-width: 688px;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	width: min-content;
 }

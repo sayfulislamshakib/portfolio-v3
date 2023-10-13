@@ -87,3 +87,12 @@
 .points-highlight {
 	font-weight: 500;
 }
+/* color Thumbnail Styles */
+.color-thumbnail img {
+	flex: none;
+	height: 447.88px;
+	width: 688px;
+	overflow: hidden;
+	position: relative;
+	border-radius: 4px;
+}

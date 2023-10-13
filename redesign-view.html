@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="redesign.css" />
 		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" href="view-image.css" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
 			rel="stylesheet" />
@@ -21,7 +22,7 @@
 				<a class="tablinks active" href="#about">About</a>
 				<a class="tablinks" href="#why">Why Redesign</a>
 				<a class="tablinks" href="#problem">Problem</a>
-				<a class="tablinks" href="#challenge">The Challenge</a>
+				<a class="tablinks" href="#color">Color</a>
 				<a class="tablinks" href="#research">Research</a>
 				<a class="tablinks" href="#opprtunites">Opprtunites</a>
 				<a class="tablinks" href="#decisions">Decisions</a>
@@ -94,26 +95,31 @@
 				<div>
 					<div id="problem" class="highlight">Problem</div>
 					<div class="text-normal">
-						food.my is an internal product management tool which functions as a
-						Customer Relationship Management (CRM) system for e-commerce. It
-						provides a platform for internal user management and product
-						management for businesses. This CRM allows for managing users,
-						products, and relevant data to enable companies to monitor and
-						analyze performance efficiently.
+						From a user's perspective, we can observe that users cannot obtain
+						the required information accurately. The design lacks proper color
+						balance, resulting in a subpar user experience and accessibility
+						issues from a visual standpoint.
 					</div>
 				</div>
 				<div>
-					<div id="challenge" class="highlight">The Challenge</div>
+					<div id="color" class="highlight">Let's start with color</div>
 					<div class="text-normal">
-						food.my is a SaaS company dedicated to helping businesses enhance
-						their internal operations and stand out in a competitive market.
-						After conducting comprehensive UX research and testing, we have
-						identified significant opportunities to improve our internal product
-						management tool, making it even more helpful to internal users. With
-						the information gathered from our research, we are poised to develop
-						enhancements to create an even more elegant and user-friendly user
-						experience.
+						The current design features an improper and unbalanced use of color
+						palettes, resulting in visual chaos. In addition, it has created a
+						confusing and cluttered visual experience for users, which may lead
+						to a lack of engagement and difficulty navigating the platform.
+						Therefore, revising the colour palettes and implementing a balanced
+						colour scheme will improve the overall design and user experience.
 					</div>
+				</div>
+				<div class="color-thumbnail">
+					<div class="popup-image">
+						<img src="images/color-issue.png" alt="" width="300" height="200" />
+					</div>
+				</div>
+
+				<div id="image-viewer">
+					<img class="modal-content" id="full-image" />
 				</div>
 				<div>
 					<div id="research" class="highlight">Research</div>
@@ -130,6 +136,7 @@
 				</div>
 			</div>
 		</div>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="main.js"></script>
 	</body>
 </html>

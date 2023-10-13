@@ -63,3 +63,14 @@ window.addEventListener("scroll", updateActiveTab);
 
 // Call the updateActiveTab function once to initialize the active tab
 updateActiveTab();
+
+$(document).ready(function () {
+	$(".popup-image img").click(function () {
+		$("#full-image").attr("src", $(this).attr("src"));
+		$("#image-viewer").show();
+	});
+
+	$("#image-viewer").click(function () {
+		$("#image-viewer").hide();
+	});
+});

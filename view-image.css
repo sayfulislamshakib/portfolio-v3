@@ -1,0 +1,37 @@
+/* Style the Image Used to Trigger the Modal */
+.popup-image img {
+	cursor: zoom-in;
+	transition: opacity 0.3s ease-in-out;
+}
+
+/* The Modal (background) */
+#image-viewer {
+	cursor: zoom-out;
+	display: None;
+	position: fixed;
+	z-index: 1;
+	padding: 2%;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: #1e1e1eab;
+	background-color: #1e1e1eab;
+}
+.modal-content {
+	cursor: zoom-out;
+	margin: auto;
+	display: block;
+	width: 100%;
+	max-width: 1280px;
+	border-radius: 4px;
+}
+/* .modal-content {
+} */
+#image-viewer .close:hover,
+#image-viewer .close:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}

@@ -4,6 +4,7 @@
 	box-sizing: border-box;
 	font-family: "Inter", sans-serif;
 }
+
 /* Body Styles */
 body {
 	min-height: 100vh;
@@ -19,15 +20,18 @@ body {
 	font-weight: 400;
 	line-height: 180%;
 }
-/* image style */
+
+/* Image Styles */
 img {
 	width: 688px;
 	height: auto;
 }
+
 .navbar img {
 	width: 50px;
 	height: 50px;
 }
+
 /* Container Styles */
 .container {
 	display: flex;
@@ -40,6 +44,7 @@ img {
 	width: min-content;
 	z-index: 1;
 }
+
 /* Right Column Styles */
 .right {
 	display: flex;
@@ -51,6 +56,7 @@ img {
 	position: relative;
 	width: 688px;
 }
+
 /* Header Text Styles */
 .header-text {
 	display: flex;
@@ -64,6 +70,7 @@ img {
 	transform: perspective(1200px);
 	width: 100%;
 }
+
 /* Tab Styles */
 .tab {
 	align-items: flex-start;
@@ -80,6 +87,7 @@ img {
 	will-change: transform;
 	z-index: 1;
 }
+
 /* Tab Button Styles */
 .tab a {
 	text-decoration: none;
@@ -89,11 +97,11 @@ img {
 	padding: 8px;
 	text-align: left;
 	cursor: pointer;
-	pointer-events: all;
 	font-size: 16px;
 	margin-bottom: 4px;
 	width: 200px;
 }
+
 /* Create an active/current "tab button" class */
 .tab a.active {
 	width: 200px;
@@ -102,6 +110,7 @@ img {
 	border-left: 2px solid #1e1e1e;
 	background-color: #f5f5f5;
 }
+
 /* Tab Content Styles */
 .tabcontent {
 	float: left;
@@ -110,6 +119,7 @@ img {
 	border-left: none;
 	height: 300px;
 }
+
 /* Text Styles */
 .text-normal {
 	padding-top: 16px;
@@ -118,24 +128,29 @@ img {
 	color: #4f4f4f;
 }
 
+/* Highlight Styles */
 .highlight {
 	font-size: 16px;
 	font-weight: 700;
 }
 
+/* Highlight Medium Styles */
 .highlight-md {
 	font-size: 16px;
 	font-weight: 500;
 }
 
+/* Highlight Small Styles */
 .highlight-sm {
 	font-size: 16px;
 	font-weight: 600;
 }
 
+/* Bio Text Styles */
 .bio-text {
 	color: #5c5c5c;
 }
+
 /* Heading Styles */
 .heading {
 	color: #787878;
@@ -143,18 +158,23 @@ img {
 	line-height: 1.5em;
 }
 
+/* Heading Link Styles */
 .heading a {
 	color: #1e1e1e;
 	text-decoration: none;
 }
+
+/* Info Text Styles */
 .info-text-2 {
 	font-size: 14px;
 	color: #9e9e9e;
 }
+
 .info-text-3 {
 	font-size: 16px;
 	color: #9e9e9e;
 }
+
 /* Company Text Styles */
 .company {
 	color: #9e9e9e;
@@ -164,6 +184,7 @@ img {
 	text-decoration: none;
 	color: #9e9e9e;
 }
+
 /* Button Styles */
 .button button,
 .button button:hover,
@@ -198,237 +219,31 @@ img {
 	background-color: #1e1e1e;
 }
 
+/* Button Row Styles */
 .button-row {
 	display: flex;
 	gap: 16px;
 }
+
 /* Divider Styles */
 .divider {
 	border: 1px solid #f0f0f0;
 	width: 200px;
 	margin: 16px 0;
 }
+
 /* Info Text Styles */
 .info-text {
 	font-style: italic;
 	font-size: 12px;
 	color: #9e9e9e;
 }
-/* Post Body Styles */
-User * {
-	scroll-behavior: smooth;
-	box-sizing: border-box;
-	font-family: "Inter", sans-serif;
-}
-body {
-	min-height: 100vh;
-	width: auto;
-	background-color: #fafafa;
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	height: min-content;
-	justify-content: flex-start;
-	overflow: visible;
-	padding: 0 0 120px;
-	position: relative;
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 180%;
-}
-.container {
-	align-content: flex-start;
-	align-items: flex-start;
-	display: flex;
-	flex: none;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	gap: 80px;
-	height: min-content;
-	justify-content: flex-start;
-	overflow: visible;
-	padding: 80px 0;
-	position: relative;
-	width: min-content;
-	z-index: 1;
-}
-.right {
-	display: flex;
-	flex: none;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	gap: 48px;
-	height: min-content;
-	justify-content: center;
-	overflow: hidden;
-	padding-top: 80px;
-	position: relative;
-	width: 688px;
-}
-.header-text {
-	display: flex;
-	flex: none;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	gap: 8px;
-	height: min-content;
-	justify-content: flex-start;
-	max-width: 688px;
-	overflow: visible;
-	padding: 0;
-	position: relative;
-	transform: perspective(1200px);
-	width: 100%;
-}
-/* Style the tab */
-.tab {
-	align-items: flex-start;
-	display: flex;
-	flex: none;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	height: min-content;
-	justify-content: flex-start;
-	overflow: hidden;
-	padding: 0;
-	position: sticky;
-	top: 80px;
-	width: 200px;
-	will-change: transform;
-	z-index: 1;
-}
-/* Style the buttons inside the tab */
-.tab a {
-	text-decoration: none;
-	display: block;
-	background-color: inherit;
-	color: gray;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	padding-left: 8px;
-	padding-right: 8px;
-	text-align: left;
-	cursor: pointer;
-	font-size: 16px;
-	margin-bottom: 4px;
-}
-/* Create an active/current "tab button" class */
-.tab a.active {
-	width: 200px;
-	color: #1e1e1e;
-	cursor: default;
-	border-left: 2px solid #1e1e1e;
-	background-color: #f5f5f5;
-}
-/* Style the tab content */
-.tabcontent {
-	float: left;
-	padding: 0px 12px;
-	width: 70%;
-	border-left: none;
-	height: 300px;
-}
-.text-normal {
-	padding-top: 16px;
-	font-size: 16px;
-	font-weight: 400px;
-	color: #4f4f4f;
-}
-.highlight {
-	font-size: 16px;
-	font-weight: 700;
-}
-.highlight-md {
-	font-size: 16px;
-	font-weight: 500;
-}
-.highlight-sm {
-	font-size: 16px;
-	font-weight: 600;
-}
-.bio-text {
-	color: #5c5c5c;
-}
 
-.company {
-	color: #9e9e9e;
-}
-.company a {
-	text-decoration: none;
-	color: #9e9e9e;
-}
-.button button {
-	transition: 0.3s;
-	padding: 8px 16px;
-	font-size: 16px;
-	background-color: #1e1e1e;
-	color: #fff;
-	border-radius: 4px;
-	border: none;
-	cursor: pointer;
-	margin-top: 24px;
-}
-.button button:hover {
-	transition: 0.3s;
-	padding: 8px 16px;
-	font-size: 16px;
-	background-color: #484848;
-	color: #fff;
-	border-radius: 4px;
-	border: none;
-	cursor: pointer;
-	margin-top: 24px;
-}
-.button-outline button {
-	transition: 0.3s;
-	padding: 8px 16px;
-	font-size: 16px;
-	color: #1e1e1e;
-	background-color: transparent;
-	border-radius: 4px;
-	border: 1px solid #1e1e1e;
-	cursor: pointer;
-	margin-top: 24px;
-}
-.button-outline button:hover {
-	transition: 0.3s;
-	padding: 8px 16px;
-	font-size: 16px;
-	color: #fff;
-	background-color: #1e1e1e;
-	border-radius: 4px;
-	cursor: pointer;
-	margin-top: 24px;
-}
-.button-row {
-	display: flex;
-	gap: 16px;
-}
-.divider {
-	border: 1px solid #f0f0f0;
-	width: 200px;
-	margin: 16px 0px;
-}
-.heading {
-	color: #787878;
-	font-weight: 400;
-	line-height: 1.5em;
-}
-.heading a {
-	color: #1e1e1e;
-	text-decoration: none;
-}
-.info-text {
-	font-style: italic;
-	font-size: 12px;
-	color: #9e9e9e;
-}
+/* Post Body Styles */
 .post-body {
 	align-content: flex-start;
 	align-items: flex-start;
 	display: flex;
-	flex: none;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	gap: 16px;
@@ -441,6 +256,7 @@ body {
 	transform: perspective(1200px);
 	width: 100%;
 }
+
 /* Post Thumbnail Styles */
 .post-thumbnail {
 	flex: none;
@@ -450,6 +266,7 @@ body {
 	width: 688px;
 	border-radius: 4px;
 }
+
 /* Post Text Styles */
 .post-text {
 	align-content: flex-start;
@@ -466,6 +283,7 @@ body {
 	position: relative;
 	width: 100%;
 }
+
 /* Post Left Text Styles */
 .post-left-text {
 	align-content: flex-start;
@@ -483,6 +301,7 @@ body {
 	position: relative;
 	width: 1px;
 }
+
 /* Post Date Styles */
 .post-date {
 	align-content: center;
@@ -500,6 +319,7 @@ body {
 	position: relative;
 	width: min-content;
 }
+
 /* Back Button Styles */
 .back {
 	transition: 0.3s;
@@ -515,12 +335,13 @@ body {
 	border-radius: 100px;
 }
 
-/* video Styles*/
+/* Video Styles */
 video {
 	border: 1px solid #e5e5e5;
 	height: auto;
 	width: 100%;
 }
+
 /* Hide the default video controls */
 #autoplay-video::-webkit-media-controls,
 #autoplay-video::-webkit-media-controls-enclosure {
@@ -533,7 +354,7 @@ video {
 	display: none !important;
 }
 
-/* contact text start*/
+/* Contact Text Styles */
 .contact-text {
 	color: #1e1e1e;
 	font-family: "Inter", sans-serif;
@@ -542,4 +363,3 @@ video {
 	line-height: 150%;
 	width: 100%;
 }
-/* contact text end */

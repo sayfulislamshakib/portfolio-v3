@@ -36,8 +36,7 @@ const updateActiveTab = () => {
 // Add click event listeners to each tab link
 tabLinks.forEach((link) => {
 	link.addEventListener("click", (event) => {
-		// Prevent the default link behavior
-		event.preventDefault();
+		event.preventDefault(); // Prevent the default link behavior
 
 		// Remove the "active" class from all tab links
 		tabLinks.forEach((tabLink) => {
@@ -64,6 +63,7 @@ window.addEventListener("scroll", updateActiveTab);
 // Call the updateActiveTab function once to initialize the active tab
 updateActiveTab();
 
+// Using jQuery for image popup functionality
 $(document).ready(function () {
 	$(".popup-image img").click(function () {
 		$("#full-image").attr("src", $(this).attr("src"));

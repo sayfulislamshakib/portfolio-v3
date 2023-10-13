@@ -6,7 +6,7 @@
 	flex-direction: column;
 	flex-wrap: nowrap;
 	gap: 16px;
-	height: min-content;
+	height: auto;
 	justify-content: flex-start;
 	max-width: 688px;
 	overflow: visible;
@@ -15,6 +15,7 @@
 	transform: perspective(1200px);
 	width: 100%;
 }
+
 /* Post Thumbnail Styles */
 .redesign-thumbnail img {
 	flex: none;
@@ -24,6 +25,7 @@
 	position: relative;
 	border-radius: 4px;
 }
+
 /* Post Text Styles */
 .redesign-text {
 	align-content: flex-start;
@@ -32,7 +34,7 @@
 	flex: none;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	height: min-content;
+	height: auto;
 	justify-content: space-between;
 	max-width: 688px;
 	overflow: hidden;
@@ -40,6 +42,7 @@
 	position: relative;
 	width: 100%;
 }
+
 /* Post Left Text Styles */
 .redesign-left-text {
 	align-content: flex-start;
@@ -49,14 +52,15 @@
 	flex-direction: column;
 	flex-wrap: nowrap;
 	gap: 4px;
-	height: min-content;
+	height: auto;
 	justify-content: flex-start;
 	max-width: 688px;
 	overflow: hidden;
 	padding: 0;
 	position: relative;
-	width: 1px;
+	width: 100%;
 }
+
 /* Post Date Styles */
 .redesign-date {
 	align-content: center;
@@ -66,13 +70,13 @@
 	flex-direction: row;
 	flex-wrap: nowrap;
 	gap: 16px;
-	height: min-content;
+	height: auto;
 	justify-content: flex-start;
 	max-width: 688px;
 	overflow: hidden;
 	padding: 0;
 	position: relative;
-	width: min-content;
+	width: auto;
 }
 
 /* Points Style */
@@ -84,10 +88,12 @@
 	list-style-type: square;
 	margin-top: 16px;
 }
+
 .points-highlight {
 	font-weight: 500;
 }
-/* color Thumbnail Styles */
+
+/* Color Thumbnail Styles */
 .color-thumbnail img {
 	flex: none;
 	height: 447.88px;

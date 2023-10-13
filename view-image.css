@@ -26,7 +26,7 @@
 	margin: auto;
 	display: block;
 	width: 100%;
-	max-width: 1280px;
+	max-width: 100wh;
 	border-radius: 4px;
 }
 /* .modal-content {

@@ -4,34 +4,30 @@ const tabLinks = document.querySelectorAll(".tablinks");
 // Get all sections that you want to link to
 const sections = document.querySelectorAll("section");
 
-// Function to check if an element is in the viewport
-const isElementInViewport = (el) => {
-	const rect = el.getBoundingClientRect();
-	return (
-		rect.top >= 0 &&
-		rect.left >= 0 &&
-		rect.bottom <=
-			(window.innerHeight || document.documentElement.clientHeight) &&
-		rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-	);
-};
-
-// Function to update the active tab based on the currently visible section
-const updateActiveTab = () => {
-	let found = false;
-	sections.forEach((section, index) => {
-		if (!found && isElementInViewport(section)) {
+// Create an Intersection Observer instance
+const observer = new IntersectionObserver((entries, observer) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
 			// Remove the "active" class from all tab links
 			tabLinks.forEach((tabLink) => {
 				tabLink.classList.remove("active");
 			});
 
 			// Add the "active" class to the corresponding tab link
-			tabLinks[index].classList.add("active");
-			found = true; // Only highlight the first visible section
+			const targetTabLink = document.querySelector(
+				`[href="#${entry.target.id}"]`
+			);
+			if (targetTabLink) {
+				targetTabLink.classList.add("active");
+			}
 		}
 	});
-};
+});
+
+// Observe each section
+sections.forEach((section) => {
+	observer.observe(section);
+});
 
 // Add click event listeners to each tab link
 tabLinks.forEach((link) => {
@@ -56,12 +52,6 @@ tabLinks.forEach((link) => {
 		}
 	});
 });
-
-// Add a scroll event listener to update the active tab while scrolling
-window.addEventListener("scroll", updateActiveTab);
-
-// Call the updateActiveTab function once to initialize the active tab
-updateActiveTab();
 
 // Using jQuery for image popup functionality
 $(document).ready(function () {

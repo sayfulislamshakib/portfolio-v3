@@ -1,7 +1,6 @@
 /* Style the Image Used to Trigger the Modal */
 .popup-image img {
 	cursor: zoom-in;
-	transition: opacity 0.3s ease-in-out;
 }
 
 /* The Modal (background) */
@@ -28,12 +27,4 @@
 	width: 100%;
 	max-width: 100wh;
 	border-radius: 4px;
-}
-/* .modal-content {
-} */
-#image-viewer .close:hover,
-#image-viewer .close:focus {
-	color: #bbb;
-	text-decoration: none;
-	cursor: pointer;
 }

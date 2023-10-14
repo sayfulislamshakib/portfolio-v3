@@ -3,12 +3,13 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="style.css" />
-		<link rel="stylesheet" href="redesign.css" />
+		<link rel="stylesheet" href="shot.css" />
+		<link rel="stylesheet" href="view-image.css" />
 		<link rel="shortcut icon" href="favicon.ico" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
 			rel="stylesheet" />
-		<title>Redesign</title>
+		<title>Design Shot's</title>
 	</head>
 	<body>
 		<div class="container">
@@ -18,8 +19,8 @@
 				</div>
 				<a class="" href="index.html">Home</a>
 				<a class="" href="about.html">About</a>
-				<a class="active" href="">Redesign</a>
-				<a class="" href="shot.html">Shot's</a>
+				<a class="" href="redesign.html">Redesign</a>
+				<a class="active" href="shot.html">Shot's</a>
 				<a class="" href="resume.html">Resume</a>
 				<div class="divider"></div>
 				<a
@@ -32,30 +33,33 @@
 			</div>
 			<div class="right">
 				<div class="header-text">
-					<div class="highlight">Redesign</div>
+					<div class="highlight">Design Shot's</div>
 					<div class="bio-text">
-						My expertise lies in simplifying complex applications to enhance
-						user-friendliness and modern aesthetics. Explore my redesign
-						projects and discover how I can improve your product. Click on the
-						image for more information.
+						I've dedicated myself to enhancing my visual design skills by
+						creating specialized 'shots.' These visually engaging elements are
+						carefully crafted to elevate aesthetics and user experience,
+						creating an immersive and informative narrative within my designs.
 					</div>
 				</div>
 				<!-- post start -->
-				<div class="redesign-body">
-					<div class="redesign-thumbnail">
-						<a href="redesign-view.html"
-							><img src="images/redesign-image-1.png" alt=""
-						/></a>
-					</div>
-					<div class="redesign-text">
-						<div class="redesign-left-text">
-							<span>Improve the bank dashboard to save users time.</span>
-							<span class="info-text-2">⎯ Redesign Case Study</span>
+				<div class="shot-body">
+					<div class="shot">
+						<div class="shot-card">
+							<div class="popup-image">
+								<img src="images/sort-1.svg" alt="" />
+							</div>
+							<div class="text-row">
+								<div class="small-text">Stop watch concept design</div>
+								<div class="small-text">2023</div>
+							</div>
+							<span class="small-text-2">⎯ Design shot</span>
 						</div>
-						<div class="post-date info-text-3">2022</div>
 					</div>
 				</div>
 			</div>
+		</div>
+		<div id="image-viewer">
+			<img class="modal-content" id="full-image" />
 		</div>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="main.js"></script>

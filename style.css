@@ -357,13 +357,3 @@ video {
 	height: 0;
 	display: none !important;
 }
-
-/* Contact Text Styles */
-.contact-text {
-	color: var(--text-primary);
-	font-family: "Inter", sans-serif;
-	font-size: 24px;
-	font-weight: 600;
-	line-height: 150%;
-	width: 100%;
-}

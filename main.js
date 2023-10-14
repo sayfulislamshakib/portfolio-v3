@@ -67,10 +67,10 @@ updateActiveTab();
 $(document).ready(function () {
 	$(".popup-image img").click(function () {
 		$("#full-image").attr("src", $(this).attr("src"));
-		$("#image-viewer").show();
+		$("#image-viewer").fadeIn(250);
 	});
 
 	$("#image-viewer").click(function () {
-		$("#image-viewer").hide();
+		$("#image-viewer").fadeOut(250);
 	});
 });

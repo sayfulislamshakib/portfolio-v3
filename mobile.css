@@ -135,6 +135,7 @@
 		align-items: center;
 		background-color: #fafafa;
 		position: relative;
+		padding-right: 16px;
 	}
 	.tab a {
 		padding: 0;

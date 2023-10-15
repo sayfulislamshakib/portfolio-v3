@@ -116,3 +116,14 @@
 	position: relative;
 	border-radius: 4px;
 }
+@media (max-width: 600px) {
+	.redesign-thumbnail img {
+		width: 100%;
+		height: auto;
+	}
+	.color-thumbnail img {
+		width: 100%;
+		height: auto;
+		border-radius: 4px;
+	}
+}

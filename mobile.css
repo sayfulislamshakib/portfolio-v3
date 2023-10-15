@@ -1,0 +1,124 @@
+@media (max-width: 600px) {
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	body {
+		width: 100%;
+		font-size: 16px;
+	}
+	/* Image Styles */
+	img {
+		width: 450px;
+		height: auto;
+	}
+	/* Container Styles */
+	.container {
+		display: flex;
+		flex-direction: column;
+		/* align-items: flex-start; */
+		padding: 0 16px;
+		position: relative;
+		width: 100%;
+		z-index: 1;
+	}
+	/* Right Column Styles */
+	.right {
+		display: flex;
+		flex-direction: column;
+		gap: 48px;
+		width: 100%;
+	}
+	/* hide tab */
+	.tab {
+		display: none;
+	}
+	/* Header Text Styles */
+	.header-text {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		justify-content: flex-start;
+		overflow: visible;
+		padding: 0;
+		position: relative;
+		transform: perspective(1200px);
+		width: 100%;
+	}
+	/* Post Body Styles */
+	.post-body {
+		align-content: center;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		gap: 16px;
+		height: min-content;
+		justify-content: center;
+		overflow: visible;
+		padding: 0;
+		position: relative;
+		transform: perspective(1200px);
+		width: 100%;
+	}
+
+	/* Post Thumbnail Styles */
+	.post-thumbnail {
+		flex: none;
+		height: auto;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		border-radius: 4px;
+	}
+
+	/* Post Text Styles */
+	.post-text {
+		align-content: flex-start;
+		align-items: flex-start;
+		display: flex;
+		flex: none;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		height: min-content;
+		justify-content: space-between;
+		overflow: hidden;
+		padding: 0;
+		position: relative;
+		width: 100%;
+	}
+
+	/* Post Left Text Styles */
+	.post-left-text {
+		align-content: flex-start;
+		align-items: flex-start;
+		display: flex;
+		flex: 1 0 0px;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		gap: 4px;
+		height: min-content;
+		justify-content: flex-start;
+		overflow: hidden;
+		padding: 0;
+		position: relative;
+		width: 1px;
+	}
+
+	/* Post Date Styles */
+	.post-date {
+		align-content: center;
+		align-items: center;
+		display: flex;
+		flex: none;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		gap: 16px;
+		height: min-content;
+		justify-content: flex-start;
+		overflow: hidden;
+		padding: 0;
+		position: relative;
+		width: min-content;
+	}
+}

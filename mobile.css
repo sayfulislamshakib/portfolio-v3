@@ -16,7 +16,6 @@
 	.container {
 		display: flex;
 		flex-direction: column;
-		/* align-items: flex-start; */
 		padding: 0 16px;
 		position: relative;
 		width: 100%;
@@ -28,6 +27,7 @@
 		flex-direction: column;
 		gap: 24px;
 		width: 100%;
+		padding-top: 24px;
 	}
 	/* Header Text Styles */
 	.header-text {
@@ -115,6 +115,29 @@
 		overflow: hidden;
 		padding: 0;
 		position: relative;
+		width: min-content;
+	}
+	.menu {
+		display: flex;
+	}
+	.menu img {
+		width: 24px;
+		height: 24px;
+	}
+	.hide-on-mobile {
+		display: none;
+	}
+	.tab {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #fafafa;
+	}
+	.tab a {
+		padding: 0;
+		margin: 0;
 		width: min-content;
 	}
 }

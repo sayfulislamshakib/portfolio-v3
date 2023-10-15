@@ -12,6 +12,7 @@
 	--color-border-light: #f0f0f0;
 }
 /* color variables end */
+
 /* Contact Text Styles */
 .contact-text {
 	color: var(--text-secondary);

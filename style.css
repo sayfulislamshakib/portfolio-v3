@@ -116,7 +116,9 @@ img {
 	margin-bottom: 4px;
 	width: 200px;
 }
-
+.menu {
+	display: none;
+}
 /* Create an active/current "tab button" class */
 .tab a.active {
 	width: 200px;
@@ -125,7 +127,6 @@ img {
 	border-left: 2px solid var(--color-border-dark);
 	background-color: var(--color-elevated);
 }
-
 /* Tab Content Styles */
 .tabcontent {
 	float: left;

@@ -69,20 +69,21 @@
 }
 
 .shot-card {
+	width: 100%;
 	place-content: center;
 	align-items: center;
 	display: flex;
-	flex: 0 0 auto;
+	flex: 1 1 auto;
 	flex-flow: column;
 	gap: 8px;
 	height: auto;
 	overflow: hidden;
 	padding: 0;
 	position: relative;
-	width: auto;
 }
-
 .shot img {
+	width: 400px;
+	height: auto;
 	border-radius: 8px;
 }
 

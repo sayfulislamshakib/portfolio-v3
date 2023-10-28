@@ -5,19 +5,18 @@
 
 /* The Modal (background) */
 #image-viewer {
-	overflow: hidden;
-	cursor: zoom-out;
-	display: None;
+	display: none;
 	position: fixed;
 	z-index: 1;
-	padding: 2%;
 	left: 0;
 	top: 0;
 	width: 100%;
 	height: 100%;
+	background-color: #ffffffaf;
 	overflow: auto;
-	background-color: #ffffffaf;
-	background-color: #ffffffaf;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .modal-content {
 	overflow: hidden;
@@ -25,6 +24,6 @@
 	margin: auto;
 	display: block;
 	width: 100%;
-	max-width: 100wh;
+	max-width: 100%;
 	border-radius: 4px;
 }

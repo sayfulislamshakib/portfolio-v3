@@ -43,8 +43,8 @@ img {
 }
 
 .navbar img {
-	width: 50px;
-	height: 50px;
+	width: 42px;
+	height: 42px;
 }
 
 /* Container Styles */
@@ -67,7 +67,6 @@ img {
 	gap: 48px;
 	justify-content: center;
 	overflow: hidden;
-	padding-top: 80px;
 	position: relative;
 	width: 688px;
 }
@@ -88,9 +87,9 @@ img {
 
 /* Tab Styles */
 .tab {
-	align-items: flex-start;
 	display: flex;
 	flex-direction: column;
+	align-items: flex-start;
 	flex-wrap: nowrap;
 	height: min-content;
 	justify-content: flex-start;
@@ -98,7 +97,7 @@ img {
 	padding: 0;
 	position: sticky;
 	top: 80px;
-	width: 200px;
+	/* width: 200px; */
 	will-change: transform;
 	z-index: 1;
 }
@@ -113,7 +112,6 @@ img {
 	text-align: left;
 	cursor: pointer;
 	font-size: 16px;
-	margin-bottom: 4px;
 	width: 200px;
 }
 .menu {
@@ -121,11 +119,10 @@ img {
 }
 /* Create an active/current "tab button" class */
 .tab a.active {
-	width: 200px;
 	color: var(--text-primary);
 	cursor: default;
-	border-left: 2px solid var(--color-border-dark);
-	background-color: var(--color-elevated);
+	/* background-color: var(--color-elevated); */
+	font-weight: 500;
 }
 /* Tab Content Styles */
 .tabcontent {
@@ -265,10 +262,10 @@ img {
 /* Post Thumbnail Styles */
 .post-thumbnail {
 	flex: none;
-	height: 494px;
+	width: 688px;
+	height: auto;
 	overflow: hidden;
 	position: relative;
-	width: 688px;
 	border-radius: 4px;
 }
 

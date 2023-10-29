@@ -57,10 +57,10 @@ tabLinks.forEach((link) => {
 $(document).ready(function () {
 	$(".popup-image img").click(function () {
 		$("#full-image").attr("src", $(this).attr("src"));
-		$("#image-viewer").fadeIn(400);
+		$("#image-viewer").fadeIn(150);
 	});
 
 	$("#image-viewer").click(function () {
-		$("#image-viewer").fadeOut(400);
+		$("#image-viewer").fadeOut(150);
 	});
 });

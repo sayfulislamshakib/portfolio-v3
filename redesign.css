@@ -103,8 +103,10 @@
 	line-height: 180%;
 	font-weight: 400;
 	color: var(--text-secondary);
-	list-style-type: square;
 	margin-top: 16px;
+}
+.list-style {
+	list-style-type: disc;
 }
 
 .points-highlight {

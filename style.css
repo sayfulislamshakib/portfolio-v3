@@ -200,13 +200,11 @@ img {
 
 /* Button Styles */
 .button button,
-.button button:hover,
-.button button,
 .button button:hover {
 	transition: 0.3s;
 	padding: 8px 16px;
 	font-size: 16px;
-	border-radius: 4px;
+	border-radius: 8px;
 	cursor: pointer;
 	margin-top: 24px;
 }
@@ -214,7 +212,7 @@ img {
 .button button {
 	background-color: var(--color-elevated);
 	color: #1e1e1e;
-	border: none;
+	border: 1px solid var(--color-elevated-dark);
 }
 
 .button button:hover {

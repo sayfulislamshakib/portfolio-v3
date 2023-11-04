@@ -204,6 +204,7 @@ img {
 	transition: 0.3s;
 	padding: 8px 16px;
 	font-size: 16px;
+	font-weight: 500;
 	border-radius: 8px;
 	cursor: pointer;
 	margin-top: 24px;

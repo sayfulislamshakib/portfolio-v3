@@ -235,7 +235,7 @@ img {
 /* Divider Styles */
 .divider {
 	border: 1px solid var(--color-border-light);
-	width: 200px;
+	width: 8.875rem;
 	margin: 16px 0;
 }
 

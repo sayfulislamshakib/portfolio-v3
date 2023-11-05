@@ -14,7 +14,7 @@
 /* color variables end */
 .right iframe {
 	width: 688px;
-	height: 1260px;
+	height: 1280px;
 	border: 1px solid var(--color-border-light);
 	border-radius: 4px;
 }

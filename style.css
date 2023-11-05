@@ -43,6 +43,10 @@ img {
 	height: auto;
 }
 
+.navbar a {
+	height: 54px;
+}
+
 .navbar img {
 	width: 38px;
 	height: 38px;

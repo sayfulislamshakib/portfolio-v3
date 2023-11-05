@@ -151,4 +151,10 @@
 	.tab .navbar a {
 		padding: 0;
 	}
+	.single-image {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 }

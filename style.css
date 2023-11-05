@@ -167,7 +167,9 @@ img {
 .bio-text {
 	color: var(--text-secondary);
 }
-
+.bio-text .company a:hover {
+	color: var(--text-primary);
+}
 /* Heading Styles */
 .heading {
 	color: var(--text-tertiary);

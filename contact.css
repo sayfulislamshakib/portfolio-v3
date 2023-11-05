@@ -26,7 +26,3 @@
 	color: var(--text-primary);
 	text-decoration: none;
 }
-.contact-text a:hover {
-	color: var(--text-primary);
-	text-decoration: underline;
-}

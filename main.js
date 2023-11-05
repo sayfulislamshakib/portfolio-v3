@@ -4,7 +4,7 @@ const tabLinks = document.querySelectorAll(".tablinks");
 // Get all sections that you want to link to
 const sections = document.querySelectorAll("section");
 
-// Create an Intersection Observer instance
+// Create an Intersection Observer instance to highlight the active tab when a section is in the viewport
 const observer = new IntersectionObserver((entries, observer) => {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
@@ -24,7 +24,7 @@ const observer = new IntersectionObserver((entries, observer) => {
 	});
 });
 
-// Observe each section
+// Observe each section to track which section is in the viewport
 sections.forEach((section) => {
 	observer.observe(section);
 });
@@ -45,7 +45,7 @@ tabLinks.forEach((link) => {
 		// Get the target section ID from the href attribute
 		const targetSectionId = link.getAttribute("href").substring(1);
 
-		// Scroll to the target section
+		// Scroll to the target section with smooth behavior
 		const targetSection = document.getElementById(targetSectionId);
 		if (targetSection) {
 			targetSection.scrollIntoView({ behavior: "smooth" });
@@ -55,11 +55,13 @@ tabLinks.forEach((link) => {
 
 // Using jQuery for image popup functionality
 $(document).ready(function () {
+	// When an image inside "popup-image" is clicked, display the full image
 	$(".popup-image img").click(function () {
 		$("#full-image").attr("src", $(this).attr("src"));
 		$("#image-viewer").fadeIn(150);
 	});
 
+	// Clicking on the image viewer hides it
 	$("#image-viewer").click(function () {
 		$("#image-viewer").fadeOut(150);
 	});

@@ -138,8 +138,8 @@
 		display: flex;
 		flex-direction: row;
 		gap: 8px;
-		flex-wrap: rap;
 		position: relative;
+		width: auto;
 	}
 	.tab a {
 		width: auto;

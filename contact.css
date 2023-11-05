@@ -15,9 +15,9 @@
 
 /* Contact Text Styles */
 .contact-text {
-	color: var(--text-secondary);
+	color: var(--text-tertiary);
 	font-family: "Inter", sans-serif;
-	font-size: 28px;
+	font-size: 1.5rem;
 	font-weight: 600;
 	line-height: 180%;
 	width: 100%;

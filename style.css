@@ -32,7 +32,7 @@ body {
 	overflow: visible;
 	padding: 0 0 120px;
 	position: relative;
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 400;
 	line-height: 180%;
 }
@@ -170,6 +170,15 @@ img {
 .bio-text .company a:hover {
 	color: var(--text-primary);
 }
+/* Company Text Styles */
+.company {
+	color: var(--text-accent);
+}
+
+.company a {
+	text-decoration: none;
+	color: var(--text-accent);
+}
 /* Heading Styles */
 .heading {
 	color: var(--text-tertiary);
@@ -191,16 +200,6 @@ img {
 
 .info-text-3 {
 	font-size: 16px;
-	color: var(--text-accent);
-}
-
-/* Company Text Styles */
-.company {
-	color: var(--text-accent);
-}
-
-.company a {
-	text-decoration: none;
 	color: var(--text-accent);
 }
 

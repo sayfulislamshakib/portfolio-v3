@@ -355,3 +355,20 @@ video {
 	height: 0;
 	display: none !important;
 }
+
+/* Feed in animation */
+.animation {
+	opacity: 0;
+	animation: feedIn 1s ease forwards;
+}
+
+@keyframes feedIn {
+	from {
+		opacity: 0;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

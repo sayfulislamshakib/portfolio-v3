@@ -1,4 +1,4 @@
-/* color variables start*/
+/* color variables start */
 :root {
 	--color-background: #fafafa;
 	--color-elevated: #f5f5f5;
@@ -30,7 +30,7 @@ body {
 	justify-content: flex-start;
 	align-items: center;
 	overflow: visible;
-	padding: 0 0 120px;
+	padding: 0 0 7.5rem;
 	position: relative;
 	font-size: 1rem;
 	font-weight: 400;
@@ -39,27 +39,27 @@ body {
 
 /* Image Styles */
 img {
-	width: 688px;
+	width: 43rem;
 	height: auto;
 }
 
 .navbar a {
-	height: 54px;
+	height: 3.375rem;
 }
 
 .navbar img {
-	width: 38px;
-	height: 38px;
+	width: 2.375rem;
+	height: 2.375rem;
 }
 
 /* Container Styles */
 .container {
 	display: flex;
 	flex-direction: row;
-	gap: 80px;
+	gap: 5rem;
 	align-items: flex-start;
 	justify-content: flex-start;
-	padding: 80px 0;
+	padding: 5rem 0;
 	position: relative;
 	width: min-content;
 	z-index: 1;
@@ -69,24 +69,24 @@ img {
 .right {
 	display: flex;
 	flex-direction: column;
-	gap: 48px;
+	gap: 3rem;
 	justify-content: center;
 	overflow: hidden;
 	position: relative;
-	width: 688px;
+	width: 43rem;
 }
 
 /* Header Text Styles */
 .header-text {
 	display: flex;
 	flex-direction: column;
-	gap: 8px;
+	gap: 0.5rem;
 	justify-content: flex-start;
-	max-width: 688px;
+	max-width: 43rem;
 	overflow: visible;
 	padding: 0;
 	position: relative;
-	transform: perspective(1200px);
+	transform: perspective(75rem);
 	width: 100%;
 }
 
@@ -101,8 +101,8 @@ img {
 	overflow: hidden;
 	padding: 0;
 	position: sticky;
-	top: 80px;
-	width: 200px;
+	top: 5rem;
+	width: 12.5rem;
 	will-change: transform;
 	z-index: 1;
 }
@@ -113,53 +113,52 @@ img {
 	display: block;
 	background-color: inherit;
 	color: var(--text-tertiary);
-	padding: 8px;
+	padding: 0.5rem;
 	text-align: left;
 	cursor: pointer;
-	font-size: 16px;
+	font-size: 1rem;
 }
 .menu {
 	display: none;
 }
+
 /* Create an active/current "tab button" class */
 .tab a.active {
 	color: var(--text-primary);
 	cursor: default;
-	/* background-color: var(--color-elevated); */
 	font-weight: 500;
 }
 /* Tab Content Styles */
 .tabcontent {
 	float: left;
-	padding: 0px 12px;
-	width: 70%;
+	padding: 0 0.75rem;
+	width: 4.375rem;
 	border-left: none;
-	height: 300px;
+	height: 18.75rem;
 }
 
 /* Text Styles */
 .text-normal {
-	/* padding-top: 8px;
-	font-size: 16px;
-	font-weight: 400; */
+	font-size: 1rem;
+	font-weight: 400;
 	color: var(--text-secondary);
 }
 
 /* Highlight Styles */
 .highlight {
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 700;
 }
 
 /* Highlight Medium Styles */
 .highlight-md {
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 500;
 }
 
 /* Highlight Small Styles */
 .highlight-sm {
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 600;
 }
 
@@ -194,12 +193,12 @@ img {
 
 /* Info Text Styles */
 .info-text-2 {
-	font-size: 14px;
+	font-size: 0.875rem;
 	color: var(--text-accent);
 }
 
 .info-text-3 {
-	font-size: 16px;
+	font-size: 1rem;
 	color: var(--text-accent);
 }
 
@@ -207,12 +206,12 @@ img {
 .button a,
 .button :hover {
 	transition: 0.3s;
-	padding: 8px 16px;
-	font-size: 16px;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
 	font-weight: 500;
-	border-radius: 8px;
+	border-radius: 0.5rem;
 	cursor: pointer;
-	margin-top: 24px;
+	margin-top: 1.5rem;
 	text-decoration: none;
 }
 
@@ -229,20 +228,20 @@ img {
 /* Button Row Styles */
 .button-row {
 	display: flex;
-	gap: 16px;
+	gap: 1rem;
 }
 
 /* Divider Styles */
 .divider {
 	border: 1px solid var(--color-border-light);
 	width: 8.875rem;
-	margin: 16px 0;
+	margin: 1rem 0;
 }
 
 /* Info Text Styles */
 .info-text {
 	font-style: italic;
-	font-size: 12px;
+	font-size: 0.75rem;
 	color: var(--text-accent);
 }
 
@@ -253,25 +252,25 @@ img {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
-	gap: 16px;
+	gap: 1rem;
 	height: min-content;
 	justify-content: flex-start;
-	max-width: 688px;
+	max-width: 43rem;
 	overflow: visible;
 	padding: 0;
 	position: relative;
-	transform: perspective(1200px);
+	transform: perspective(75rem);
 	width: 100%;
 }
 
 /* Post Thumbnail Styles */
 .post-thumbnail {
 	flex: none;
-	width: 688px;
+	width: 43rem;
 	height: auto;
 	overflow: hidden;
 	position: relative;
-	border-radius: 4px;
+	border-radius: 0.25rem;
 }
 
 /* Post Text Styles */
@@ -284,7 +283,7 @@ img {
 	flex-wrap: nowrap;
 	height: min-content;
 	justify-content: space-between;
-	max-width: 688px;
+	max-width: 43rem;
 	overflow: hidden;
 	padding: 0;
 	position: relative;
@@ -299,14 +298,14 @@ img {
 	flex: 1 0 0px;
 	flex-direction: column;
 	flex-wrap: nowrap;
-	gap: 4px;
+	gap: 0.25rem;
 	height: min-content;
 	justify-content: flex-start;
-	max-width: 688px;
+	max-width: 43rem;
 	overflow: hidden;
 	padding: 0;
 	position: relative;
-	width: 1px;
+	width: 0.0625rem;
 }
 
 /* Post Date Styles */
@@ -317,10 +316,10 @@ img {
 	flex: none;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	gap: 16px;
+	gap: 1rem;
 	height: min-content;
 	justify-content: flex-start;
-	max-width: 688px;
+	max-width: 43rem;
 	overflow: hidden;
 	padding: 0;
 	position: relative;
@@ -331,15 +330,15 @@ img {
 .back {
 	transition: 0.3s;
 	background-color: var(--color-elevated);
-	padding: 8px;
-	border-radius: 100px;
+	padding: 0.5rem;
+	border-radius: 6.25rem;
 }
 
 .back:hover {
 	transition: 0.3s;
 	background-color: var(--color-elevated-dark);
-	padding: 8px;
-	border-radius: 100px;
+	padding: 0.5rem;
+	border-radius: 6.25rem;
 }
 
 /* Video Styles */
@@ -370,7 +369,7 @@ video {
 @keyframes feedIn {
 	from {
 		opacity: 0;
-		transform: translateY(8px);
+		transform: translateY(0.5rem);
 	}
 	to {
 		opacity: 1;

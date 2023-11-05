@@ -14,9 +14,14 @@
 /* color variables end */
 .right iframe {
 	width: 688px;
-	height: 1280px;
+	height: 1308px;
 	border: 1px solid var(--color-border-light);
 	border-radius: 4px;
+}
+.resume-footer {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
 }
 @media (max-width: 600px) {
 	.right iframe {

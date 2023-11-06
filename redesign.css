@@ -118,26 +118,10 @@
 	font-weight: 500;
 }
 
-/* Color Thumbnail Styles */
-.color-thumbnail img {
-	/* Styles for color thumbnail images */
-	flex: none;
-	height: 27.99rem;
-	width: 43rem;
-	overflow: hidden;
-	position: relative;
-	border-radius: 0.25rem;
-}
-
 /* Media Query for Responsive Design */
 @media (max-width: 69.44rem) {
 	.redesign-thumbnail img {
 		width: 100%;
 		height: auto;
-	}
-	.color-thumbnail img {
-		width: 100%;
-		height: auto;
-		border-radius: 0.25rem;
 	}
 }

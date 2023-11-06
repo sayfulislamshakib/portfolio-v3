@@ -33,7 +33,7 @@ body {
 	justify-content: flex-start;
 	align-items: center;
 	overflow: visible;
-	padding: 0 0 7.5rem;
+	/* padding: 0 0 7.5rem; */
 	position: relative;
 	font-size: 1rem;
 	font-weight: 400;

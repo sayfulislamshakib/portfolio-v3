@@ -328,7 +328,10 @@ img {
 	position: relative;
 	width: min-content;
 }
-
+/* Post footer */
+.post-footer {
+	margin-bottom: 16px;
+}
 /* Back Button Styles */
 .back {
 	transition: 0.3s;

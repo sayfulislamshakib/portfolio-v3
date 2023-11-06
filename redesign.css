@@ -37,8 +37,8 @@
 .redesign-thumbnail img {
 	/* Styles for post thumbnail images */
 	flex: none;
-	height: 16/9;
-	width: 16/9;
+	height: 100%;
+	width: 100%;
 	overflow: hidden;
 	position: relative;
 	border-radius: 0.25rem;

@@ -86,7 +86,8 @@
 		overflow: hidden;
 		position: relative;
 		width: 100%;
-		border-radius: 1rem;
+		height: auto;
+		border-radius: 0.5rem;
 	}
 
 	/* Post Text Styles */

@@ -1,6 +1,8 @@
 /* Style the Image Used to Trigger the Modal */
 .popup-image img {
 	cursor: zoom-in;
+	width: 16/9;
+	height: 16/9;
 }
 
 /* The Modal (background) */

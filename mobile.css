@@ -152,7 +152,8 @@
 	}
 
 	.tab a {
-		width: auto;
+		width: 2.38rem;
+		height: 2.38rem;
 	}
 
 	.tab .active {

@@ -152,6 +152,10 @@
 	}
 
 	.tab a {
+		width: auto;
+	}
+
+	.navbar a {
 		width: 2.375rem;
 		height: 2.375rem;
 	}

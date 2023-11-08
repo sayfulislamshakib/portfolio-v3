@@ -63,6 +63,11 @@ $(document).ready(function () {
 
 	// Clicking on the image viewer hides it
 	$("#image-viewer").click(function () {
-		$("#image-viewer").fadeOut(150);
+		$("#image-viewer").fadeOut(50);
+	});
+
+	// Close the image viewer when the user scrolls
+	$(window).scroll(function () {
+		$("#image-viewer").fadeOut(50);
 	});
 });

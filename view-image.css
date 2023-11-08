@@ -17,14 +17,19 @@
 	width: 100%;
 	height: 100%;
 	overflow: auto;
-	background-color: #ffffffaf;
+	background-color: #0000007d;
+	vertical-align: middle;
+	animation: zoomIn 0.3s ease;
 }
 .modal-content {
-	overflow: hidden;
 	cursor: zoom-out;
-	margin: auto;
-	display: block;
+	overflow: auto;
+	cursor: default;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	width: 100%;
-	max-width: 100%;
+	height: 90vh;
 	border-radius: 0.25rem;
 }

@@ -22,14 +22,13 @@
 	animation: zoomIn 0.3s ease;
 }
 .modal-content {
-	cursor: zoom-out;
 	overflow: auto;
 	cursor: default;
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 100%;
-	height: 90vh;
-	border-radius: 0.25rem;
+	width: auto;
+	height: 94vh;
+	cursor: zoom-out;
 }

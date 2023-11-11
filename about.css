@@ -1,6 +1,6 @@
 /* color variables start */
 :root {
-	--color-background: #fafafa; /* Background color */
+	--color-background: #ffffff; /* Background color */
 	--color-elevated: #f5f5f5; /* Elevated background color */
 	--color-elevated-dark: #ebebeb; /* Dark elevated background color */
 	--text-primary: #1e1e1e; /* Primary text color */
@@ -76,7 +76,6 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 }
-
 .logos img {
 	width: 9.375rem;
 	height: auto;

@@ -277,6 +277,7 @@ img {
 	overflow: hidden;
 	position: relative;
 	border-radius: 0.25rem;
+	border: 1px solid var(--color-border-light);
 }
 
 /* Post Text Styles */

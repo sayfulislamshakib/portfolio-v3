@@ -100,10 +100,6 @@
 	border: 1px solid var(--color-border-light);
 }
 
-.card img:hover {
-	border: 1px solid #ff5f33;
-}
-
 .text-row {
 	place-content: center space-between;
 	align-items: center;

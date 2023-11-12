@@ -18,6 +18,7 @@
 	height: 100%;
 	overflow: auto;
 	background-color: #0000007d;
+	backdrop-filter: blur(8px);
 	vertical-align: middle;
 	animation: zoomIn 0.3s ease;
 }

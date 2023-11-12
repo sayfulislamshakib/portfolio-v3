@@ -1,56 +1,66 @@
-// Get all tab links
-const tabLinks = document.querySelectorAll(".tablinks");
+$(document).ready(function () {
+	var tabLinks = $(".tablinks");
+	var windowHeight = $(window).height();
+	var prevActiveTab;
 
-// Get all sections that you want to link to
-const sections = document.querySelectorAll("section");
-
-// Create an Intersection Observer instance to highlight the active tab when a section is in the viewport
-const observer = new IntersectionObserver((entries, observer) => {
-	entries.forEach((entry) => {
-		if (entry.isIntersecting) {
-			// Remove the "active" class from all tab links
-			tabLinks.forEach((tabLink) => {
-				tabLink.classList.remove("active");
-			});
-
-			// Add the "active" class to the corresponding tab link
-			const targetTabLink = document.querySelector(
-				`[href="#${entry.target.id}"]`
-			);
-			if (targetTabLink) {
-				targetTabLink.classList.add("active");
-			}
-		}
+	tabLinks.on("click", function (e) {
+		e.preventDefault();
+		var targetSection = $($(this).attr("href"));
+		smoothScroll(targetSection);
 	});
-});
 
-// Observe each section to track which section is in the viewport
-sections.forEach((section) => {
-	observer.observe(section);
-});
+	function smoothScroll(target) {
+		var marginTop = 80;
+		$("html, body").animate(
+			{
+				scrollTop: target.offset().top - marginTop,
+			},
+			800
+		);
+	}
 
-// Add click event listeners to each tab link
-tabLinks.forEach((link) => {
-	link.addEventListener("click", (event) => {
-		event.preventDefault(); // Prevent the default link behavior
+	$(window).on("scroll", function () {
+		var scrollPosition = $(this).scrollTop();
+		var activeTab;
 
-		// Remove the "active" class from all tab links
-		tabLinks.forEach((tabLink) => {
-			tabLink.classList.remove("active");
+		tabLinks.each(function () {
+			var link = $(this);
+			var targetSection = $(link.attr("href"));
+			var sectionTop = targetSection.offset().top;
+			var sectionHeight = targetSection.outerHeight();
+
+			var sectionBottom = sectionTop + sectionHeight - 80;
+
+			if (
+				scrollPosition >= sectionTop - windowHeight / 2 &&
+				scrollPosition < sectionBottom &&
+				windowHeight <= sectionHeight
+			) {
+				activeTab = link;
+			} else if (
+				scrollPosition >= sectionTop - windowHeight / 2 &&
+				windowHeight > sectionHeight
+			) {
+				activeTab = link;
+			}
 		});
 
-		// Add the "active" class to the clicked tab link
-		link.classList.add("active");
-
-		// Get the target section ID from the href attribute
-		const targetSectionId = link.getAttribute("href").substring(1);
-
-		// Scroll to the target section with smooth behavior
-		const targetSection = document.getElementById(targetSectionId);
-		if (targetSection) {
-			targetSection.scrollIntoView({ behavior: "smooth" });
-		}
+		updateActiveTab(activeTab);
 	});
+
+	function updateActiveTab(activeTab) {
+		if (activeTab && activeTab !== prevActiveTab) {
+			tabLinks.removeClass("active");
+			activeTab.addClass("active");
+			prevActiveTab = activeTab;
+		}
+
+		var documentHeight = $(document).height();
+		if ($(window).scrollTop() + windowHeight >= documentHeight) {
+			tabLinks.removeClass("active");
+			tabLinks.last().addClass("active");
+		}
+	}
 });
 
 // Using jQuery for image popup functionality

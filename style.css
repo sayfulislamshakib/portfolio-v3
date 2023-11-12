@@ -77,6 +77,7 @@ img {
 	overflow: hidden;
 	position: relative;
 	width: 43rem;
+	padding-bottom: 200px;
 }
 
 /* Header Text Styles */

@@ -22,6 +22,12 @@
 	scrollbar-gutter: stable;
 }
 
+/* Text hightlight */
+::selection {
+	background-color: var(--text-primary);
+	color: var(--color-background);
+}
+
 /* Body Styles */
 body {
 	min-height: 100vh;

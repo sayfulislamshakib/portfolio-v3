@@ -50,7 +50,7 @@
 
 .single-image {
 	flex: 1 0 0px;
-	overflow: hidden;
+
 	position: relative;
 }
 
@@ -88,7 +88,7 @@
 	flex-flow: column;
 	gap: 0.5rem;
 	height: auto;
-	overflow: hidden;
+
 	padding: 0;
 	position: relative;
 	width: auto;
@@ -107,7 +107,7 @@
 	flex: 0 0 auto;
 	flex-flow: row;
 	height: auto;
-	overflow: hidden;
+
 	padding: 0;
 	position: relative;
 	width: auto;
@@ -128,7 +128,7 @@
 	flex: 0 0 auto;
 	flex-flow: row;
 	height: auto;
-	overflow: hidden;
+
 	padding: 0;
 	position: relative;
 	width: auto;
@@ -153,7 +153,7 @@
 		flex-flow: column;
 		gap: 0.5rem;
 		height: auto;
-		overflow: hidden;
+
 		padding: 0;
 		position: relative;
 	}

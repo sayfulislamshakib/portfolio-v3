@@ -269,7 +269,6 @@ img {
 	flex: none;
 	width: 43rem;
 	height: auto;
-	overflow: hidden;
 	position: relative;
 	border-radius: 0.25rem;
 	border: 1px solid var(--color-border-light);
@@ -286,7 +285,7 @@ img {
 	height: min-content;
 	justify-content: space-between;
 	max-width: 43rem;
-	overflow: hidden;
+
 	padding: 0;
 	position: relative;
 	width: 100%;
@@ -304,7 +303,7 @@ img {
 	height: min-content;
 	justify-content: flex-start;
 	max-width: 43rem;
-	overflow: hidden;
+
 	padding: 0;
 	position: relative;
 	width: 0.0625rem;
@@ -322,7 +321,7 @@ img {
 	height: min-content;
 	justify-content: flex-start;
 	max-width: 43rem;
-	overflow: hidden;
+
 	padding: 0;
 	position: relative;
 	width: min-content;

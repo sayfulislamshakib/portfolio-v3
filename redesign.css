@@ -106,3 +106,8 @@
 		height: auto;
 	}
 }
+
+li {
+	list-style-position: inside;
+	list-style-type: square;
+}

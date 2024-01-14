@@ -36,8 +36,6 @@
 	flex-wrap: nowrap;
 	height: auto;
 	justify-content: space-between;
-	max-width: 43rem;
-
 	padding: 0;
 	position: relative;
 	width: 100%;
@@ -55,8 +53,6 @@
 	gap: 0.25rem;
 	height: auto;
 	justify-content: flex-start;
-	max-width: 43rem;
-
 	padding: 0;
 	position: relative;
 	width: 100%;
@@ -74,8 +70,6 @@
 	gap: 1rem;
 	height: auto;
 	justify-content: flex-start;
-	max-width: 43rem;
-
 	padding: 0;
 	position: relative;
 	width: auto;

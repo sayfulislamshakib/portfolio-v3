@@ -91,7 +91,6 @@ img {
 	flex-direction: column;
 	gap: 0.5rem;
 	justify-content: flex-start;
-	max-width: 43rem;
 	overflow: visible;
 	padding: 0;
 	position: relative;
@@ -262,7 +261,6 @@ img {
 	gap: 1rem;
 	height: min-content;
 	justify-content: flex-start;
-	max-width: 43rem;
 	overflow: visible;
 	padding: 0;
 	position: relative;
@@ -290,8 +288,6 @@ img {
 	flex-wrap: nowrap;
 	height: min-content;
 	justify-content: space-between;
-	max-width: 43rem;
-
 	padding: 0;
 	position: relative;
 	width: 100%;
@@ -308,8 +304,6 @@ img {
 	gap: 0.25rem;
 	height: min-content;
 	justify-content: flex-start;
-	max-width: 43rem;
-
 	padding: 0;
 	position: relative;
 	width: 0.0625rem;
@@ -326,8 +320,6 @@ img {
 	gap: 1rem;
 	height: min-content;
 	justify-content: flex-start;
-	max-width: 43rem;
-
 	padding: 0;
 	position: relative;
 	width: min-content;
@@ -353,7 +345,6 @@ img {
 
 /* Video Styles */
 video {
-	border: 1px solid var(--color-border-light);
 	height: auto;
 	width: 100%;
 }

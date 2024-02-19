@@ -32,13 +32,13 @@ $(document).ready(function () {
 			var sectionBottom = sectionTop + sectionHeight - 80;
 
 			if (
-				scrollPosition >= sectionTop - windowHeight / 2 &&
+				scrollPosition >= sectionTop - windowHeight / 8 &&
 				scrollPosition < sectionBottom &&
 				windowHeight <= sectionHeight
 			) {
 				activeTab = link;
 			} else if (
-				scrollPosition >= sectionTop - windowHeight / 2 &&
+				scrollPosition >= sectionTop - windowHeight / 8 &&
 				windowHeight > sectionHeight
 			) {
 				activeTab = link;

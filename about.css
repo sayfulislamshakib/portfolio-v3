@@ -87,7 +87,6 @@
 	flex-flow: column;
 	gap: 0.5rem;
 	height: auto;
-
 	padding: 0;
 	position: relative;
 	width: auto;
@@ -152,12 +151,11 @@
 		flex-flow: column;
 		gap: 0.5rem;
 		height: auto;
-
 		padding: 0;
 		position: relative;
 	}
 	.card img {
-		width: 25rem;
+		width: 24rem;
 		height: auto;
 	}
 }

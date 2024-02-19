@@ -32,3 +32,9 @@
 	height: 94vh;
 	cursor: zoom-out;
 }
+.modalImg {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}

@@ -365,7 +365,33 @@ video {
 	opacity: 0;
 	animation: feedIn 1s ease forwards;
 }
+/* Tooltip style */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
 
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 2px 8px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 0%;
+  margin-left: 0px;
+  width: max-content;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  animation: feedIn 0.1s ease forwards;
+}
 @keyframes feedIn {
 	from {
 		opacity: 0;

@@ -1,40 +1,40 @@
 /* Style the Image Used to Trigger the Modal */
 .popup-image img {
-	cursor: zoom-in;
-	width: 100%;
-	height: 100%;
+  cursor: zoom-in;
+  width: 100%;
+  height: 100%;
 }
 
 /* The Modal (background) */
 #image-viewer {
-	display: None;
-	cursor: zoom-out;
-	position: fixed;
-	z-index: 1;
-	padding: 2%;
-	left: 0;
-	top: 0;
-	width: 100vw;
-	height: 100%;
-	overflow: auto;
-	background-color: #0000007d;
-	backdrop-filter: blur(8px);
-	vertical-align: middle;
-	animation: zoomIn 0.3s ease;
+  display: None;
+  cursor: zoom-out;
+  position: fixed;
+  z-index: 1;
+  padding: 2%;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  overflow: auto;
+  background-color: #0000007d;
+  backdrop-filter: blur(8px);
+  vertical-align: middle;
+  animation: zoomIn 0.3s ease;
 }
 .modal-content {
-	overflow: auto;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 90vw;
-	height: 94vh;
-	cursor: zoom-out;
+  overflow: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 94vh;
+  cursor: zoom-out;
 }
 .modalImg {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }

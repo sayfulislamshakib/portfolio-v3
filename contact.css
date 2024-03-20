@@ -37,6 +37,7 @@
   display: inline-flex;
   align-items: center;
   gap: 16px;
+  width: max-content;
 }
 
 a {

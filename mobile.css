@@ -155,10 +155,14 @@
 
   .mobile-tab a {
     padding: 8px 4px;
-    color: var(--text-primary);
+    color: var(--text-tertiary);
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
+  }
+
+  .mobile-tab a.active {
+    color: var(--text-primary);
   }
 
   .mobile-menu a {

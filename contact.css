@@ -62,13 +62,12 @@ a img {
 
 /* snakebar style */
 #snackbar {
+  visibility: hidden;
   display: inline-flex;
   padding: 0.5rem 1rem;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  visibility: hidden;
-  margin-left: -125px;
   background-color: var(--text-primary);
   color: var(--color-background);
   box-shadow: 0px 4px 1rem 0px rgba(30, 30, 30, 0.08);
@@ -77,7 +76,6 @@ a img {
   padding: 0.5rem 1rem;
   position: fixed;
   z-index: 1;
-  left: 50%;
   bottom: 30px;
   font-size: 1rem;
 }
@@ -129,5 +127,25 @@ a img {
   to {
     bottom: 0;
     opacity: 0;
+  }
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  #snackbar {
+    left: 24px;
+    right: 24px;
+    width: auto;
+    max-width: calc(100% - 20px);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #snackbar {
+    left: 24px;
+    right: 24px;
+    width: auto;
+    max-width: calc(100% - 20px);
+    font-size: 0.8rem;
   }
 }

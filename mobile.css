@@ -175,6 +175,7 @@
     border: 1px solid var(--color-border-light);
     padding: 4px 8px 4px 16px;
     border-radius: 2rem;
+    color: var(--text-primary);
   }
 
   .navigation {

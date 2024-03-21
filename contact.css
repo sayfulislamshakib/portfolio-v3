@@ -148,4 +148,8 @@ a img {
     max-width: calc(100% - 20px);
     font-size: 0.8rem;
   }
+
+  .horizontal-divider {
+    width: 100%;
+  }
 }

@@ -422,6 +422,14 @@ video {
   animation: feedIn 0.3s ease forwards;
 }
 
+.mobile-tab {
+  display: none;
+}
+
+.navigation {
+  display: none;
+}
+
 @keyframes feedIn {
   from {
     opacity: 0;

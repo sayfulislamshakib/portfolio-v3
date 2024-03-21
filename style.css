@@ -430,6 +430,10 @@ video {
   display: none;
 }
 
+#myDIV {
+  display: none;
+}
+
 @keyframes feedIn {
   from {
     opacity: 0;

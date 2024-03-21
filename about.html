@@ -1,120 +1,168 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="style.css" />
-		<link rel="stylesheet" href="about.css" />
-		<link rel="stylesheet" href="mobile.css" />
-		<link rel="shortcut icon" href="favicon.ico" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-			rel="stylesheet" />
-		<title>About</title>
-	</head>
-	<body>
-		<div class="container">
-			<div class="tab">
-				<div><a href="index.html">Home</a></div>
-				<div>
-					<a class="active">About</a>
-				</div>
-				<div>
-					<a href="redesign.html">Redesign</a>
-				</div>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="mobile.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>About</title>
+  </head>
+  <body>
+    <div class="mobile-tab">
+      <div><a href="index.html">Home</a></div>
+      <div class="mobile-menu">
+        <a onclick="myFunction()"
+          >Menu
+          <svg
+            width="25"
+            height="25"
+            viewBox="0 0 25 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <mask
+              id="mask0_175_8447"
+              style="mask-type: alpha"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="25"
+              height="25"
+            >
+              <rect
+                x="0.64502"
+                y="0.593231"
+                width="24"
+                height="24"
+                fill="#1E1E1E"
+              />
+            </mask>
+            <g mask="url(#mask0_175_8447)">
+              <path
+                d="M12.6451 15.5432C12.5117 15.5432 12.3867 15.5224 12.2701 15.4807C12.1534 15.4391 12.0451 15.3682 11.9451 15.2682L7.34507 10.6682C7.16174 10.4849 7.07007 10.2516 7.07007 9.96823C7.07007 9.68489 7.16174 9.45156 7.34507 9.26823C7.5284 9.08489 7.76174 8.99323 8.04507 8.99323C8.3284 8.99323 8.56174 9.08489 8.74507 9.26823L12.6451 13.1682L16.5451 9.26823C16.7284 9.08489 16.9617 8.99323 17.2451 8.99323C17.5284 8.99323 17.7617 9.08489 17.9451 9.26823C18.1284 9.45156 18.2201 9.68489 18.2201 9.96823C18.2201 10.2516 18.1284 10.4849 17.9451 10.6682L13.3451 15.2682C13.2451 15.3682 13.1367 15.4391 13.0201 15.4807C12.9034 15.5224 12.7784 15.5432 12.6451 15.5432Z"
+                fill="#1E1E1E"
+              />
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="navigation" id="myDIV">
+      <div class="navigation-option">
+        <a class="active" href="about.html">About</a>
+      </div>
+      <div class="navigation-option"><a href="redesign.html">Redesign</a></div>
+      <div class="navigation-option"><a href="resume.html">Resume</a></div>
+      <div class="navigation-option"><a href="contact.html">Contact</a></div>
+    </div>
+    <div class="container">
+      <div class="tab">
+        <div><a href="index.html">Home</a></div>
+        <div>
+          <a class="active">About</a>
+        </div>
+        <div>
+          <a href="redesign.html">Redesign</a>
+        </div>
 
-				<div>
-					<a href="resume.html">Resume</a>
-				</div>
-				<div class="hide divider"></div>
+        <div>
+          <a href="resume.html">Resume</a>
+        </div>
+        <div class="hide divider"></div>
 
-				<div class="hide">
-					<a href="contact.html">Contact</a>
-				</div>
-			</div>
-			<div class="right animation">
-				<div class="about-text">
-					<div class="highlight">About me</div>
-					<div class="about-paragraph-text">
-						I was born in Bangladesh, where I learned the importance of being
-						adaptable, gaining different perspectives, and understanding various
-						cultures. These skills have proven crucial in my career as a
-						designer.
-					</div>
-					<div class="about-paragraph-text">
-						As a child, I had a passion for drawing and admiring excellent
-						designs. I also had a strong desire to assist others. This passion
-						continues to drive my work today. I aim to assist people and
-						businesses in achieving success through design.
-					</div>
-					<div class="about-paragraph-text">
-						I am particularly interested in creating solutions for complicated
-						issues. I am motivated by the challenge of simplifying complex
-						problems through careful planning and empowering individuals.
-					</div>
-					<div class="about-paragraph-text">
-						I'm looking to work for companies that value the art of design and
-						have a mission I can connect with.
-						<span class="about-bold-text">
-							Ultimately, my goal is to design products that help people quickly
-							and effectively generate value for themselves and others.
-						</span>
-					</div>
-				</div>
-				<div class="image-style">
-					<div class="single-image">
-						<img src="images/sayful.png" alt="About me image." />
-					</div>
-					<!-- <div class="single-image">
+        <div class="hide">
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="right animation">
+        <div class="about-text">
+          <div class="highlight">About me</div>
+          <div class="about-paragraph-text">
+            I was born in Bangladesh, where I learned the importance of being
+            adaptable, gaining different perspectives, and understanding various
+            cultures. These skills have proven crucial in my career as a
+            designer.
+          </div>
+          <div class="about-paragraph-text">
+            As a child, I had a passion for drawing and admiring excellent
+            designs. I also had a strong desire to assist others. This passion
+            continues to drive my work today. I aim to assist people and
+            businesses in achieving success through design.
+          </div>
+          <div class="about-paragraph-text">
+            I am particularly interested in creating solutions for complicated
+            issues. I am motivated by the challenge of simplifying complex
+            problems through careful planning and empowering individuals.
+          </div>
+          <div class="about-paragraph-text">
+            I'm looking to work for companies that value the art of design and
+            have a mission I can connect with.
+            <span class="about-bold-text">
+              Ultimately, my goal is to design products that help people quickly
+              and effectively generate value for themselves and others.
+            </span>
+          </div>
+        </div>
+        <div class="image-style">
+          <div class="single-image">
+            <img src="images/sayful.png" alt="About me image." />
+          </div>
+          <!-- <div class="single-image">
 						<img src="images/sayful.png" alt="About me image." />
 					</div> -->
-					<!-- copy the div and link new image -->
-				</div>
-				<div class="about-text">
-					<div class="highlight">Work Experience</div>
-					<div class="logos">
-						<div class="card">
-							<a href="https://justgo.com/" target="_blank"
-								><img src="images/justgo-logo.svg" alt=""
-							/></a>
-							<div class="text-row">
-								<div class="small-text">JustGo</div>
-								<div class="small-text">Present</div>
-							</div>
-							<span class="small-text-2">Product Designer</span>
-						</div>
-						<div class="card">
-							<a href="https://www.elementzerolabs.com/" target="_blank"
-								><img src="images/elementor-logo.svg" alt="Company Logo"
-							/></a>
-							<div class="text-row">
-								<div class="small-text">Element Zero Labs</div>
-								<div class="small-text">2022</div>
-							</div>
-							<span class="small-text-2">Product Designer</span>
-						</div>
-						<div class="card">
-							<a href="https://www.upwork.com/" target="_blank"
-								><img src="images/upwork-logo.svg" alt=""
-							/></a>
-							<div class="text-row">
-								<div class="small-text">Upwrok</div>
-								<div class="small-text">Freelance</div>
-							</div>
-							<span class="small-text-2">UX Designer</span>
-						</div>
-						<div class="card">
-							<a href="#"><img src="images/songbadbd-logo.svg" alt="" /></a>
-							<div class="text-row">
-								<div class="small-text">Songbadbd</div>
-								<div class="small-text">2021</div>
-							</div>
-							<span class="small-text-2">UX Designer</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script src="main.js"></script>
-	</body>
+          <!-- copy the div and link new image -->
+        </div>
+        <div class="about-text">
+          <div class="highlight">Work Experience</div>
+          <div class="logos">
+            <div class="card">
+              <a href="https://justgo.com/" target="_blank"
+                ><img src="images/justgo-logo.svg" alt=""
+              /></a>
+              <div class="text-row">
+                <div class="small-text">JustGo</div>
+                <div class="small-text">Present</div>
+              </div>
+              <span class="small-text-2">Product Designer</span>
+            </div>
+            <div class="card">
+              <a href="https://www.elementzerolabs.com/" target="_blank"
+                ><img src="images/elementor-logo.svg" alt="Company Logo"
+              /></a>
+              <div class="text-row">
+                <div class="small-text">Element Zero Labs</div>
+                <div class="small-text">2022</div>
+              </div>
+              <span class="small-text-2">Product Designer</span>
+            </div>
+            <div class="card">
+              <a href="https://www.upwork.com/" target="_blank"
+                ><img src="images/upwork-logo.svg" alt=""
+              /></a>
+              <div class="text-row">
+                <div class="small-text">Upwrok</div>
+                <div class="small-text">Freelance</div>
+              </div>
+              <span class="small-text-2">UX Designer</span>
+            </div>
+            <div class="card">
+              <a href="#"><img src="images/songbadbd-logo.svg" alt="" /></a>
+              <div class="text-row">
+                <div class="small-text">Songbadbd</div>
+                <div class="small-text">2021</div>
+              </div>
+              <span class="small-text-2">UX Designer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>

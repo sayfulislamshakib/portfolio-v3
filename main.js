@@ -71,7 +71,7 @@ $(document).ready(function () {
     $("#image-viewer").fadeIn(150);
   });
 
-  // Clicking on the image viewer hides it
+  // Clicking on the image viewer s it
   $("#image-viewer").click(function () {
     $("#image-viewer").fadeOut(50);
   });

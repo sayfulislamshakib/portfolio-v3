@@ -374,7 +374,7 @@ video {
   width: 100%;
 }
 
-/* Hide the default video controls */
+/*  the default video controls */
 #autoplay-video::-webkit-media-controls,
 #autoplay-video::-webkit-media-controls-enclosure {
   display: none !important;

@@ -27,36 +27,26 @@
 }
 
 .about-bold-text {
-  font-weight: 600;
+  font-weight: 500;
 }
 
-.image-style {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  place-content: center flex-start;
-  align-items: center;
+.image-row {
   display: flex;
-  flex: 0 0 auto;
-  flex-flow: row;
   gap: 1rem;
-  height: auto;
-  overflow: visible;
-  padding: 0;
-  position: relative;
-  transform: perspective(75rem);
-  width: 100%;
+  flex-wrap: wrap;
 }
-
-.single-image {
-  flex: 1 0 0px;
-  position: relative;
-}
-
-.single-image img {
-  height: 23.43rem;
-  width: 18.75rem;
+.image-style {
   border: 1px solid var(--color-border-light);
   border-radius: 1rem;
+  width: 336px;
+}
+
+.image-style img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
 }
 
 .experience-row {
@@ -73,7 +63,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
 }
 
@@ -96,14 +86,13 @@
   color: var(--text-tertiary);
 }
 
-@media (max-width: 37.5rem) {
+@media (max-width: 1110px) {
   .image-style {
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
     overflow: visible;
-    padding: 0;
-    width: 100%;
   }
 }

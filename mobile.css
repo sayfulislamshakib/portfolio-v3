@@ -191,6 +191,8 @@
     backdrop-filter: blur(1rem);
     border-radius: 1rem;
     z-index: 2;
+    opacity: 0;
+    animation: navAnaimation 300ms ease forwards;
   }
 
   .navigation a {
@@ -252,5 +254,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@keyframes navAnaimation {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0.5rem);
   }
 }

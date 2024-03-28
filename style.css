@@ -163,7 +163,7 @@ img {
 /* Highlight Small Styles */
 .highlight-sm {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 /* Bio Text Styles */
@@ -294,12 +294,13 @@ button img {
 
 /* Post Thumbnail Styles */
 .post-thumbnail {
-  flex: none;
-  width: 43rem;
-  height: auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
   position: relative;
   border-radius: 0.25rem;
-  border: 1px solid var(--color-border-light);
+  outline: 1px solid var(--color-border-light);
 }
 
 /* Post Text Styles */
@@ -312,7 +313,6 @@ button img {
   flex-wrap: nowrap;
   height: min-content;
   justify-content: space-between;
-  padding: 0;
   position: relative;
   width: 100%;
 }
@@ -324,30 +324,12 @@ button img {
   display: flex;
   flex: 1 0 0px;
   flex-direction: column;
-  flex-wrap: nowrap;
   gap: 0.25rem;
   height: min-content;
   justify-content: flex-start;
-  padding: 0;
   position: relative;
-  width: 0.0625rem;
 }
 
-/* Post Date Styles */
-.post-date {
-  align-content: center;
-  align-items: center;
-  display: flex;
-  flex: none;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 1rem;
-  height: min-content;
-  justify-content: flex-start;
-  padding: 0;
-  position: relative;
-  width: min-content;
-}
 /* Post footer */
 .post-footer {
   margin-bottom: 16px;
@@ -369,8 +351,25 @@ button img {
 
 /* Video Styles */
 video {
-  height: auto;
   width: 100%;
+}
+
+/* Style for external link */
+#external-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999; /* Ensure link is clickable */
+}
+
+/* Hide default link styling */
+#external-link a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
 }
 
 /*  the default video controls */
@@ -395,7 +394,7 @@ video {
 .tooltip {
   position: relative;
   display: inline-block;
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 
 .tooltip .tooltiptext {
@@ -403,8 +402,8 @@ video {
   background-color: var(--color-border-dark);
   color: var(--color-background);
   text-align: center;
-  border-radius: 0.25rem;
-  padding: 0.125rem 0.5rem;
+  border-radius: 4px;
+  padding: 2px 8px;
 
   /* Position the tooltip */
   position: absolute;

@@ -114,10 +114,8 @@
     flex: 1 0 0px;
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 1rem;
     height: min-content;
     justify-content: flex-start;
-
     padding: 0;
     position: relative;
     width: 0.0625rem;

@@ -86,6 +86,56 @@ a img {
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
+/*Rippe effect & Available for work start*/
+
+.right {
+  gap: 1rem;
+}
+
+.available-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #4daa57;
+  font-size: 14px;
+  font-weight: 500;
+}
+.ripple {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.ripple::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 50%;
+  z-index: -1;
+  animation: ripple 1.8s ease-out infinite;
+}
+
+.ripple:first-child {
+  background-color: #4daa57;
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+/*Rippe effect & Available for work end*/
+
 @-webkit-keyframes fadein {
   from {
     bottom: 0;

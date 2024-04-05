@@ -394,16 +394,18 @@ video {
 .tooltip {
   position: relative;
   display: inline-block;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 100%;
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  background-color: var(--color-border-dark);
+  background-color: #000000;
   color: var(--color-background);
   text-align: center;
   border-radius: 4px;
-  padding: 2px 8px;
+  padding: 8px 8px;
 
   /* Position the tooltip */
   position: absolute;
@@ -412,12 +414,11 @@ video {
   left: 0%;
   margin-left: 0px;
   width: max-content;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.16);
 }
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
-  animation: feedIn 0.3s ease forwards;
+  transition-delay: 600ms;
 }
 
 .mobile-tab {

@@ -170,18 +170,14 @@ img {
 .bio-text {
   color: var(--text-secondary);
 }
-.bio-text .company a:hover {
-  color: var(--text-primary);
+.bio-text a {
+  text-decoration: none;
+  color: var(--text-secondary);
 }
-/* Company Text Styles */
-.company {
-  color: var(--text-accent);
+.bio-text a:hover {
+  text-decoration: underline;
 }
 
-.company a {
-  text-decoration: none;
-  color: var(--text-accent);
-}
 /* Heading Styles */
 .heading {
   color: var(--text-tertiary);

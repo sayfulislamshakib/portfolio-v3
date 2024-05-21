@@ -86,6 +86,11 @@
   color: var(--text-tertiary);
 }
 
+.tldr-text {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
 @media (max-width: 1110px) {
   .image-style {
     width: 100%;

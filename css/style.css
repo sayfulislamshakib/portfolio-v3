@@ -202,29 +202,6 @@ img {
   color: var(--text-accent);
 }
 
-/* Button Styles */
-.button a,
-.button :hover {
-  transition: 0.3s;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  margin-top: 1.5rem;
-  text-decoration: none;
-}
-
-.button a {
-  background-color: var(--color-elevated);
-  color: var(--text-primary);
-  border: 1px solid var(--color-elevated-dark);
-}
-
-.button :hover {
-  background-color: var(--color-elevated-dark);
-}
-
 /*Big Button */
 
 button {
@@ -239,13 +216,14 @@ button {
   background-color: var(--color-elevated);
   border: 1px solid var(--color-elevated-dark);
   border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-.button1:hover {
-  transition: 0.3s;
+button:hover {
   background-color: var(--color-elevated-dark);
-  cursor: pointer;
 }
+
 button img {
   width: 24px;
   height: 24px;

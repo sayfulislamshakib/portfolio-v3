@@ -1,24 +1,65 @@
-/* color variables start */
+/* variables start */
 :root {
-  --color-background: #ffffff; /* Background color */
-  --color-elevated: #f5f5f5; /* Elevated background color */
-  --color-elevated-dark: #ebebeb; /* Dark elevated background color */
-  --text-primary: #1e1e1e; /* Primary text color */
-  --text-secondary: #5c5c5c; /* Secondary text color */
-  --text-tertiary: #808080; /* Tertiary text color */
-  --text-accent: #9e9e9e; /* Accent text color */
-  --text-muted: #bdbdbd; /* Muted text color */
-  --color-border-dark: #1e1e1e; /* Dark border color */
-  --color-border-light: #f0f0f0; /* Light border color */
+  /* White and Black color */
+
+  --color-white: #ffff;
+  --color-black: #1e1e1e;
+
+  /* Background colors */
+
+  --color-background: #ffffff;
+  --color-elevated: #f5f5f5;
+  --color-elevated-dark: #ebebeb;
+
+  /* Text colors */
+
+  --text-primary: #1e1e1e;
+  --text-secondary: #5c5c5c;
+  --text-tertiary: #808080;
+  --text-accent: #9e9e9e;
+  --text-muted: #bdbdbd;
+
+  /* State colors */
+
+  --color-state-success: #4daa57;
+  --color-state-error: #d12626;
+
+  /* Border colors */
+
+  --color-border-light: #f0f0f0;
+  --color-border-dark: #1e1e1e;
+
+  /* Font properties */
+
+  --font-family: "Inter", sans-serif;
+
+  /* Font sizes */
+
+  --font-size-xss: 0.75rem;
+  --font-size-xs: 0.813rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+
+  /* Font weight */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  /* Line hight */
+
+  --font-line-hegiht-singel-line: 1rem;
+  --font-line-height-multi-line: 1.8rem;
+  --font-line-height-base-line: 100%;
 }
-/* color variables end */
+/* variables end */
 
 /* Universal Style */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family);
   scrollbar-gutter: stable;
 }
 
@@ -38,9 +79,9 @@ body {
   align-items: center;
   overflow: visible;
   position: relative;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 180%;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-line-height-multi-line);
 }
 
 /* Image Styles */
@@ -120,7 +161,7 @@ img {
   padding: 0.5rem;
   text-align: left;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: var(--font-size-md);
 }
 .menu {
   display: none;
@@ -130,7 +171,7 @@ img {
 .tab a.active {
   color: var(--text-primary);
   cursor: default;
-  font-weight: 500;
+  font-weight: var(--font-weight-semibold);
 }
 /* Tab Content Styles */
 .tabcontent {
@@ -143,32 +184,33 @@ img {
 
 /* Text Styles */
 .text-normal {
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
   color: var(--text-secondary);
 }
 
 /* Highlight Styles */
 .highlight {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
 }
 
 /* Highlight Medium Styles */
 .highlight-md {
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
 }
 
 /* Highlight Small Styles */
 .highlight-sm {
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
 }
 
 /* Bio Text Styles */
 .bio-text {
   color: var(--text-secondary);
+  line-height: var(--font-line-height-multi-line);
 }
 .bio-text a {
   text-decoration: none;
@@ -181,8 +223,8 @@ img {
 /* Heading Styles */
 .heading {
   color: var(--text-tertiary);
-  font-weight: 400;
-  line-height: 1.5em;
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-line-height-singel);
 }
 
 /* Heading Link Styles */
@@ -193,20 +235,20 @@ img {
 
 /* Info Text Styles */
 .info-text-2 {
-  font-size: 0.875rem;
+  font-size: var(--font-size-sm);
   color: var(--text-accent);
 }
 
 .info-text-3 {
-  font-size: 1rem;
+  font-size: var(--font-size-md);
   color: var(--text-accent);
 }
 
 /*Big Button */
 
 button {
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -306,7 +348,7 @@ button img {
 
 /* Post footer */
 .post-footer {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 /* Back Button Styles */
 .back {
@@ -368,10 +410,10 @@ video {
 .tooltip {
   position: relative;
   display: inline-block;
-  font-size: 13px;
+  font-size: var(--font-size-xs);
   letter-spacing: 0.3px;
-  font-weight: 400;
-  line-height: 100%;
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-line-height-base-line);
 }
 
 .tooltip .tooltiptext {
@@ -426,14 +468,3 @@ video {
     transform: translateY(0);
   }
 }
-
-/* @keyframes moveIn {
-  from {
-    opacity: 0;
-    transform: translateY(0.2rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-} */

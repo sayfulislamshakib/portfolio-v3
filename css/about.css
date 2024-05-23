@@ -22,7 +22,7 @@
 }
 .image-style {
   border: 1px solid var(--color-border-light);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   width: 336px;
 }
 
@@ -30,7 +30,7 @@
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   object-fit: cover;
 }
 
@@ -39,7 +39,7 @@
   flex-direction: row;
   justify-content: flex-start;
   border: 1px solid var(--color-border-light);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   padding: 1rem;
   gap: 1rem;
 }

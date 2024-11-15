@@ -263,7 +263,8 @@ button {
 }
 
 button:hover {
-  background-color: var(--color-elevated-dark);
+  box-shadow: 0px 1px 0px 0px rgba(31, 35, 40, 0.06),
+    0px 1px 3px 0px rgba(31, 35, 40, 0.08);
 }
 
 button img {
@@ -315,6 +316,8 @@ button img {
   width: 100%;
   height: fit-content;
   position: relative;
+  border: 1px solid var(--color-border-light);
+  border-radius: 0.5rem;
 }
 
 .post-thumbnail > img {
@@ -370,6 +373,8 @@ button img {
 /* Video Styles */
 video {
   width: 100%;
+  border: 1px solid var(--color-border-light);
+  border-radius: 0.5rem;
 }
 
 /* Style for external link */

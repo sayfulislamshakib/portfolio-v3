@@ -20,6 +20,7 @@
   gap: 1rem;
   flex-wrap: wrap;
 }
+
 .image-style {
   border: 1px solid var(--color-border-light);
   border-radius: 0.5rem;
@@ -30,7 +31,7 @@
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 0.5rem;
+  border-radius: inherit;
   object-fit: cover;
 }
 

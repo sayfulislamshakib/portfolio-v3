@@ -1,8 +1,11 @@
-//active tab and scroll to the section start
 $(document).ready(function () {
   var tabLinks = $(".tablinks");
   var windowHeight = $(window).height();
   var prevActiveTab;
+  var imageViewer = $("#image-viewer");
+  var fullImage = $("#full-image");
+  var snackbar = $("#snackbar");
+  var myDIV = $("#myDIV");
 
   tabLinks.on("click", function (e) {
     e.preventDefault();
@@ -29,7 +32,6 @@ $(document).ready(function () {
       var targetSection = $(link.attr("href"));
       var sectionTop = targetSection.offset().top;
       var sectionHeight = targetSection.outerHeight();
-
       var sectionBottom = sectionTop + sectionHeight - 80;
 
       if (
@@ -47,6 +49,7 @@ $(document).ready(function () {
     });
 
     updateActiveTab(activeTab);
+    imageViewer.fadeOut(50);
   });
 
   function updateActiveTab(activeTab) {
@@ -62,45 +65,31 @@ $(document).ready(function () {
       tabLinks.last().addClass("active");
     }
   }
-});
 
-//Image popup functionality
-
-// Using jQuery for image popup functionality
-$(document).ready(function () {
-  // When an image inside "popup-image" is clicked, display the full image
   $(".popup-image img").click(function () {
-    $("#full-image").attr("src", $(this).attr("src"));
-    $("#image-viewer").fadeIn(150);
+    fullImage.attr("src", $(this).attr("src"));
+    imageViewer.fadeIn(150);
   });
 
-  // Clicking on the image viewer s it
-  $("#image-viewer").click(function () {
-    $("#image-viewer").fadeOut(50);
-  });
-
-  // Close the image viewer when the user scrolls
-  $(window).scroll(function () {
-    $("#image-viewer").fadeOut(50);
+  imageViewer.click(function () {
+    imageViewer.fadeOut(50);
   });
 });
-
-// Copy text into clipboard
 
 function copyText() {
   navigator.clipboard.writeText("sayfulislamshakib.cs@gmail.com");
-  var x = document.getElementById("snackbar");
-  x.className = "show";
+  var x = $("#snackbar");
+  x.addClass("show");
   setTimeout(function () {
-    x.className = x.className.replace("show", "");
+    x.removeClass("show");
   }, 3000);
 }
 
 function myFunction() {
-  var x = document.getElementById("myDIV");
-  if (x.style.display === "none" || x.style.display === "") {
-    x.style.display = "block";
+  var x = $("#myDIV");
+  if (x.css("display") === "none" || x.css("display") === "") {
+    x.css("display", "block");
   } else {
-    x.style.display = "none";
+    x.css("display", "none");
   }
 }

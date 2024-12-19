@@ -158,6 +158,10 @@ img {
   border-radius: 0.5rem;
 }
 
+.tab div{
+  width: 100%;
+}
+
 /* Tab Button Styles */
 .tab a {
   height: fit-content;
@@ -188,6 +192,10 @@ img {
   width: 4.375rem;
   border-left: none;
   height: 18.75rem;
+}
+
+.back-button{
+  cursor: pointer;
 }
 
 /* Text Styles */

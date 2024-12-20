@@ -149,7 +149,7 @@ img {
   position: sticky;
   top: 5rem;
   will-change: transform;
-  gap: 8px;
+  gap: 0.5rem;
   z-index: 1;
 }
 

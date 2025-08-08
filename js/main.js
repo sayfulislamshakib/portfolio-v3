@@ -148,11 +148,17 @@ function copyText() {
 
 // Function to toggle the display of a div
 function myFunction() {
-  var x = $("#myDIV");
-  if (x.css("display") === "none" || x.css("display") === "") {
-    x.css("display", "block");
+  var nav = document.getElementById("mobile-nav");
+  if (!nav) return;
+  if (nav.innerHTML.trim() === "") {
+    fetch('nav/global-nav.html')
+      .then(res => res.text())
+      .then(html => {
+        nav.innerHTML = html;
+        nav.style.display = "block";
+      });
   } else {
-    x.css("display", "none");
+    nav.style.display = (nav.style.display === "block") ? "none" : "block";
   }
 }
 

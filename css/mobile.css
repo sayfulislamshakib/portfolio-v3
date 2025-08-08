@@ -236,6 +236,12 @@
   }
 }
 
+@media (max-width: 900px) {
+  .crm-nav.tab {
+    display: none !important;
+  }
+}
+
 @keyframes navAnaimation {
   from {
     opacity: 0;

@@ -20,7 +20,7 @@
 
 .medium-zoom-overlay {
   z-index: 2000 !important;
-  background: #fff !important;
+  background: rgb(255, 255, 255, 0.95) !important;
 }
 .medium-zoom-image--opened {
   z-index: 2001 !important;

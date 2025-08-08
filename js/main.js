@@ -46,6 +46,32 @@ $(document).ready(function () {
     }
   }
 
+  // Highlight the active tab for in-page anchor navigation (scroll-based) - redesign
+  function setActiveTabAnchorsRedesign() {
+    var $tabs = $('#redesign-nav .tablinks');
+    var scrollPos = $(window).scrollTop();
+    var found = false;
+    $tabs.each(function () {
+      var href = $(this).attr('href');
+      if (href && href.startsWith('#')) {
+        var target = $(href);
+        if (target.length) {
+          var offset = target.offset().top - 150;
+          if (scrollPos >= offset) {
+            $tabs.removeClass('active');
+            $(this).addClass('active');
+            found = true;
+          }
+        }
+      }
+    });
+    // If at the top, highlight the first tab
+    if (!found) {
+      $tabs.removeClass('active');
+      $tabs.first().addClass('active');
+    }
+  }
+
   function initAnchorTabs() {
     setActiveTabAnchors();
     $(window).off('scroll', setActiveTabAnchors).on('scroll', setActiveTabAnchors);
@@ -75,6 +101,15 @@ $(document).ready(function () {
     }
   }
 
+  // Observe redesign-nav for dynamic loading
+  if (document.getElementById('redesign-nav')) {
+    const observer = new MutationObserver(function() {
+      setActiveTabAnchorsRedesign();
+    });
+    observer.observe(document.getElementById('redesign-nav'), { childList: true });
+    $(window).off('scroll', setActiveTabAnchorsRedesign).on('scroll', setActiveTabAnchorsRedesign);
+  }
+
   // Smooth scroll for in-page anchor links
   $(document).on('click', 'a[href^="#"]', function (e) {
     var target = $(this.getAttribute('href'));
@@ -88,6 +123,13 @@ $(document).ready(function () {
 
   // Prevent click on active tab (global navigation)
   $(document).on('click', '.tab a.active', function(e) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    return false;
+  });
+
+  // Prevent click on active tab in redesign-nav
+  $(document).on('click', '#redesign-nav .tablinks.active', function(e) {
     e.preventDefault();
     e.stopImmediatePropagation();
     return false;
@@ -113,3 +155,34 @@ function myFunction() {
     x.css("display", "none");
   }
 }
+
+// Current jobs date calculator
+// Date calculator
+$(function() {
+  const startDate = new Date("2022-11-01"); // Start date: November 2022
+  const today = new Date(); // Current date
+
+  // Add one month to the current date
+  const nextMonth = new Date(today.setMonth(today.getMonth() + 1));
+
+  let years = today.getFullYear() - startDate.getFullYear();
+  let months = today.getMonth() - startDate.getMonth();
+
+  // Adjust the year and month if the current month is before the start month
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+
+  // Display the result
+  let resultText;
+  if (years === 0) {
+    resultText = `${months} month(s)`;
+  } else {
+    resultText = `${years} yr ${months} mos`;
+  }
+
+  if (document.getElementById("calculated-time")) {
+    document.getElementById("calculated-time").textContent = resultText;
+  }
+});

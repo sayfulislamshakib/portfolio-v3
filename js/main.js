@@ -146,21 +146,6 @@ function copyText() {
   }, 3000);
 }
 
-// Function to toggle the display of a div
-function myFunction() {
-  var nav = document.getElementById("mobile-nav");
-  if (!nav) return;
-  if (nav.innerHTML.trim() === "") {
-    fetch('nav/global-nav.html')
-      .then(res => res.text())
-      .then(html => {
-        nav.innerHTML = html;
-        nav.style.display = "block";
-      });
-  } else {
-    nav.style.display = (nav.style.display === "block") ? "none" : "block";
-  }
-}
 
 // Current jobs date calculator
 // Date calculator
@@ -192,3 +177,39 @@ $(function() {
     document.getElementById("calculated-time").textContent = resultText;
   }
 });
+
+// Function to toggle the display of a div
+window.myFunction = function() {
+  var nav = document.getElementById("mobile-nav");
+  if (!nav) return;
+  // If nav is not loaded, fetch and show it
+  if (nav.innerHTML.trim() === "") {
+    fetch('nav/global-nav.html')
+      .then(res => res.text())
+      .then(html => {
+        nav.innerHTML = html;
+        nav.style.display = "block";
+        enableMobileNavCloseOnClickOutside();
+      });
+  } else {
+    // Always show nav when Menu is clicked
+    nav.style.display = "block";
+    enableMobileNavCloseOnClickOutside();
+  }
+}
+
+function enableMobileNavCloseOnClickOutside() {
+  document.removeEventListener('mousedown', handleMobileNavOutsideClick);
+  setTimeout(function() {
+    document.addEventListener('mousedown', handleMobileNavOutsideClick);
+  }, 0);
+}
+
+function handleMobileNavOutsideClick(e) {
+  var nav = document.getElementById("mobile-nav");
+  var menu = document.querySelector('.mobile-menu');
+  if (!nav || nav.style.display !== "block") return;
+  if (nav.contains(e.target) || (menu && menu.contains(e.target))) return;
+  nav.style.display = "none";
+  document.removeEventListener('mousedown', handleMobileNavOutsideClick);
+}

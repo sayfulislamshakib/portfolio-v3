@@ -14,9 +14,8 @@
   <body>
     <div class="mobile-tab">
       <div><a class="active">Home</a></div>
-      <div class="mobile-menu">
-        <a onclick="myFunction()"
-          >Menu
+      <div class="mobile-menu" onclick="myFunction()">
+        <a> Menu
           <svg
             width="24"
             height="24"
@@ -93,6 +92,7 @@
         </div>
       </div>
     </div>
+    <div id="mobile-nav" style="display:none;"></div>
     <script>
       fetch('nav/global-nav.html')
         .then(res => res.text())

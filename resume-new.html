@@ -3,13 +3,13 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/mobile.css" />
+    <link rel="stylesheet" href="css/resume.css" />
     <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/mobile.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sayful Islam Shakib | Product Designer</title>
   </head>
   <body>
@@ -52,44 +52,51 @@
         </a>
       </div>
     </div>
+    <div class="navigation" id="myDIV">
+      <div class="navigation-option"><a href="about.html">About</a></div>
+      <div class="navigation-option"><a href="redesign.html">Redesign</a></div>
+      <div class="navigation-option">
+        <a class="active">Resume</a>
+      </div>
+      <div class="navigation-option"><a href="contact.html">Contact</a></div>
+    </div>
     <div class="container">
-      <div id="global-nav"></div>
-      <div class="right animation">
-        <div class="header-text">
-          <div class="highlight">Redesign</div>
-          <div class="bio-text">
-            My expertise lies in simplifying complex applications to enhance
-            user-friendliness and modern aesthetics. Explore my redesign
-            projects to see how I can elevate your product.
-          </div>
+      <div class="tab">
+        <div><a href="index.html">Home</a></div>
+        <div>
+          <a href="about.html">About</a>
         </div>
-        <!-- post start -->
-        <div class="post-body">
-          <div class="post-thumbnail">
-            <img src="images/bank-dashboard/cover.svg" alt="image" />
-          </div>
-          <!-- Link to navigate to another HTML page -->
-          <div id="external-link">
-            <a href="redesign-view.html"></a>
-          </div>
-          <div class="post-text">
-            <div class="post-left-text">
-              <span class="highlight"
-                >Enhance the Bank Dashboard UI to be simple and
-                user-friendly</span
-              >
-              <span class="info-text-2">— Redesign Case Study</span>
-            </div>
-            <div class="info-text-2">2022</div>
-          </div>
+        <div>
+          <a href="redesign.html">Redesign</a>
+        </div>
+
+        <div>
+          <a class="active">Resume New
+            
+          </a>
+        </div>
+        <div class="divider"></div>
+
+        <div>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="right animation">
+        <iframe
+          src="https://docs.google.com/document/d/e/2PACX-1vQgZ7kHac-MzC4C_rxMFIp_Qn7xB36SZaLyQP3rCgWQBBB2j0gqODCwE0togbHprZVq3nMU0tLY5nVG/pub?embedded=true"
+          width="auto"
+        ></iframe>
+        <div class="resume-footer">
+          <button
+            style="width: fit-content"
+            onclick="window.open('https://docs.google.com/document/d/1yns4Ou__jgoIH4F_wmMs7JJIqLs4gCz4j_jelks8vys/export?format=pdf', '_blank');"
+          >
+            Download
+          </button>
+          <p class="info-text">* The download format will be PDF</p>
         </div>
       </div>
     </div>
-    <script>
-      fetch('nav.html')
-        .then(res => res.text())
-        .then(html => { document.getElementById('global-nav').innerHTML = html; });
-    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
   </body>

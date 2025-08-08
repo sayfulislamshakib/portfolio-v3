@@ -52,33 +52,8 @@
         </a>
       </div>
     </div>
-    <div class="navigation" id="myDIV">
-      <div class="navigation-option"><a href="about.html">About</a></div>
-      <div class="navigation-option"><a href="redesign.html">Redesign</a></div>
-      <div class="navigation-option">
-        <a class="active">Resume</a>
-      </div>
-      <div class="navigation-option"><a href="contact.html">Contact</a></div>
-    </div>
     <div class="container">
-      <div class="tab">
-        <div><a href="index.html">Home</a></div>
-        <div>
-          <a href="about.html">About</a>
-        </div>
-        <div>
-          <a href="redesign.html">Redesign</a>
-        </div>
-
-        <div>
-          <a class="active">Resume</a>
-        </div>
-        <div class="divider"></div>
-
-        <div>
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
+      <div id="global-nav"></div>
       <div class="right animation">
         <iframe
           src="https://docs.google.com/document/d/e/2PACX-1vQgZ7kHac-MzC4C_rxMFIp_Qn7xB36SZaLyQP3rCgWQBBB2j0gqODCwE0togbHprZVq3nMU0tLY5nVG/pub?embedded=true"
@@ -95,6 +70,11 @@
         </div>
       </div>
     </div>
+    <script>
+      fetch('nav.html')
+        .then(res => res.text())
+        .then(html => { document.getElementById('global-nav').innerHTML = html; });
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
   </body>

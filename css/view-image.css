@@ -1,40 +1,27 @@
 /* Style the Image Used to Trigger the Modal */
+.popup-image {
+  position: relative;
+  z-index: 10;
+}
+
 .popup-image img {
   cursor: zoom-in;
   width: 100%;
   height: 100%;
+  position: relative;
+  z-index: 2;
 }
 
-/* The Modal (background) */
-#image-viewer {
-  display: None;
-  cursor: zoom-out;
-  position: fixed;
-  z-index: 1;
-  padding: 2%;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100%;
-  overflow: auto;
-  background-color: #0000007d;
-  backdrop-filter: blur(8px);
-  vertical-align: middle;
-  animation: zoomIn 0.3s ease;
+/* All other custom lightbox/modal CSS removed to avoid conflict with medium-zoom */
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  cursor: zoom-out !important;
 }
-.modal-content {
-  overflow: auto;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90vw;
-  height: 94vh;
-  cursor: zoom-out;
+
+.medium-zoom-overlay {
+  z-index: 2000 !important;
+  background: #fff !important;
 }
-.modalImg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+.medium-zoom-image--opened {
+  z-index: 2001 !important;
 }

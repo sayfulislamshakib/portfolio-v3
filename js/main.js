@@ -1,88 +1,96 @@
 $(document).ready(function () {
   // Cache jQuery selectors
-  var tabLinks = $(".tablinks");
-  var windowHeight = $(window).height();
-  var prevActiveTab;
   var imageViewer = $("#image-viewer");
   var fullImage = $("#full-image");
   var snackbar = $("#snackbar");
   var myDIV = $("#myDIV");
 
-  // Add click event to tab links for smooth scrolling
-  tabLinks.on("click", function (e) {
-    e.preventDefault();
-    var targetSection = $($(this).attr("href"));
-    smoothScroll(targetSection);
-  });
-
-  // Function to smoothly scroll to the target section
-  function smoothScroll(target) {
-    var marginTop = 80;
-    $("html, body").animate(
-      {
-        scrollTop: target.offset().top - marginTop,
-      },
-      800
-    );
-  }
-
-  // Add scroll event to window to update active tab and hide image viewer
-  $(window).on("scroll", function () {
-    var scrollPosition = $(this).scrollTop();
-    var activeTab;
-
-    // Determine which tab should be active based on scroll position
-    tabLinks.each(function () {
-      var link = $(this);
-      var targetSection = $(link.attr("href"));
-      var sectionTop = targetSection.offset().top;
-      var sectionHeight = targetSection.outerHeight();
-      var sectionBottom = sectionTop + sectionHeight - 80;
-
-      if (
-        scrollPosition >= sectionTop - windowHeight / 8 &&
-        scrollPosition < sectionBottom &&
-        windowHeight <= sectionHeight
-      ) {
-        activeTab = link;
-      } else if (
-        scrollPosition >= sectionTop - windowHeight / 8 &&
-        windowHeight > sectionHeight
-      ) {
-        activeTab = link;
+  // Highlight the active tab for global navigation (filename-based)
+  function setActiveTabGlobal() {
+    var $tabs = $('.tab a');
+    $tabs.removeClass('active');
+    var page = window.location.pathname.split('/').pop().toLowerCase();
+    if (page === '' || page === '/') page = 'index.html'; // treat root as home
+    $tabs.each(function () {
+      var tab = $(this);
+      var href = tab.attr('href').toLowerCase();
+      if (href === page) {
+        tab.addClass('active');
       }
     });
+  }
 
-    // Update the active tab and hide the image viewer
-    updateActiveTab(activeTab);
-    imageViewer.fadeOut(50);
-  });
-
-  // Function to update the active tab
-  function updateActiveTab(activeTab) {
-    if (activeTab && activeTab !== prevActiveTab) {
-      tabLinks.removeClass("active");
-      activeTab.addClass("active");
-      prevActiveTab = activeTab;
-    }
-
-    // Ensure the last tab is active when scrolled to the bottom
-    var documentHeight = $(document).height();
-    if ($(window).scrollTop() + windowHeight >= documentHeight) {
-      tabLinks.removeClass("active");
-      tabLinks.last().addClass("active");
+  // Highlight the active tab for in-page anchor navigation (scroll-based)
+  function setActiveTabAnchors() {
+    var $tabs = $('.tab a.tablinks');
+    var scrollPos = $(window).scrollTop();
+    var found = false;
+    $tabs.each(function () {
+      var href = $(this).attr('href');
+      if (href && href.startsWith('#')) {
+        var target = $(href);
+        if (target.length) {
+          var offset = target.offset().top - 150; // adjust offset as needed
+          if (scrollPos >= offset) {
+            $tabs.removeClass('active');
+            $(this).addClass('active');
+            found = true;
+          }
+        }
+      }
+    });
+    // If at the top, highlight the first tab
+    if (!found) {
+      $tabs.removeClass('active');
+      $tabs.first().addClass('active');
     }
   }
 
-  // Show full image in image viewer when thumbnail is clicked
-  $(".popup-image img").click(function () {
-    fullImage.attr("src", $(this).attr("src"));
-    imageViewer.fadeIn(150);
+  function initAnchorTabs() {
+    setActiveTabAnchors();
+    $(window).off('scroll', setActiveTabAnchors).on('scroll', setActiveTabAnchors);
+  }
+
+  // Detect which logic to use
+  if ($('.tab a.tablinks').length > 0) {
+    // In-page anchor navigation (case study)
+    initAnchorTabs();
+  } else if (document.getElementById('crm-nav')) {
+    // If crm-nav is loaded dynamically, observe and initialize
+    const observer = new MutationObserver(function() {
+      if ($('#crm-nav .tablinks').length > 0) {
+        initAnchorTabs();
+      }
+    });
+    observer.observe(document.getElementById('crm-nav'), { childList: true });
+  } else {
+    // Global navigation (main pages)
+    if (document.getElementById('global-nav')) {
+      const observer = new MutationObserver(function() {
+        setActiveTabGlobal();
+      });
+      observer.observe(document.getElementById('global-nav'), { childList: true });
+    } else {
+      setActiveTabGlobal();
+    }
+  }
+
+  // Smooth scroll for in-page anchor links
+  $(document).on('click', 'a[href^="#"]', function (e) {
+    var target = $(this.getAttribute('href'));
+    if (target.length) {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: target.offset().top - 80 // adjust offset as needed
+      }, 600);
+    }
   });
 
-  // Hide image viewer when clicked
-  imageViewer.click(function () {
-    imageViewer.fadeOut(50);
+  // Prevent click on active tab (global navigation)
+  $(document).on('click', '.tab a.active', function(e) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    return false;
   });
 });
 

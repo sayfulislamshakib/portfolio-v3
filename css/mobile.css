@@ -123,10 +123,6 @@
     width: min-content;
   }
 
-  .tab {
-    display: none;
-  }
-
   .mobile-tab {
     display: flex;
     justify-content: space-between;

@@ -140,6 +140,24 @@ img {
   width: 100%;
 }
 
+.header-text img {
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+}
+
+.home-header{
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.designation-text{
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-secondary);
+}
+
 /* Tab Styles */
 .tab, .crm-nav {
   display: flex;

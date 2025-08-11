@@ -5,52 +5,48 @@ $(document).ready(function () {
   var snackbar = $("#snackbar");
   var myDIV = $("#myDIV");
 
+  // Set initial active states
+  setActiveTabGlobal();
+
   // Highlight the active tab for global navigation (filename-based)
   function setActiveTabGlobal() {
-    var $tabs = $('.tab a');
-    $tabs.removeClass('active');
-    var page = window.location.pathname.split('/').pop().toLowerCase();
-    if (page === '' || page === '/') page = 'index.html'; // treat root as home
-    $tabs.each(function () {
+    var page = window.location.pathname.split('/').pop().toLowerCase() || 'index.html';
+    
+    // Handle both global nav and mobile nav
+    $('.tab a, .mobile-tab a, .navigation-option a').each(function() {
       var tab = $(this);
-      var href = tab.attr('href').toLowerCase();
-      if (href === page) {
+      var href = (tab.attr('href') || '').toLowerCase();
+      
+      // Special case for home page
+      if (page === 'index.html' && !href) {
+        tab.addClass('active');
+        return;
+      }
+      
+      // Remove active from non-matching tabs
+      if (href !== page) {
+        tab.removeClass('active');
+      } else {
         tab.addClass('active');
       }
     });
   }
 
-  // Highlight the active tab for in-page anchor navigation (scroll-based)
-  function setActiveTabAnchors() {
-    var $tabs = $('.tab a.tablinks');
-    var scrollPos = $(window).scrollTop();
-    var found = false;
-    $tabs.each(function () {
-      var href = $(this).attr('href');
-      if (href && href.startsWith('#')) {
-        var target = $(href);
-        if (target.length) {
-          var offset = target.offset().top - 150; // adjust offset as needed
-          if (scrollPos >= offset) {
-            $tabs.removeClass('active');
-            $(this).addClass('active');
-            found = true;
-          }
-        }
-      }
-    });
-    // If at the top, highlight the first tab
-    if (!found) {
-      $tabs.removeClass('active');
-      $tabs.first().addClass('active');
+  // Ensure active states are set whenever navigation happens
+  $(document).on('click', '.tab a, .mobile-tab a, .navigation-option a', function() {
+    var href = $(this).attr('href');
+    if (href && !href.startsWith('#')) {
+      // Small delay to ensure DOM is ready after navigation
+      setTimeout(setActiveTabGlobal, 100);
     }
-  }
+  });
 
-  // Highlight the active tab for in-page anchor navigation (scroll-based) - redesign
-  function setActiveTabAnchorsRedesign() {
-    var $tabs = $('#redesign-nav .tablinks');
+  // Highlight the active tab for in-page anchor navigation (scroll-based)
+  function setActiveTabAnchors(selector = '.tab a.tablinks') {
+    var $tabs = $(selector);
     var scrollPos = $(window).scrollTop();
     var found = false;
+    
     $tabs.each(function () {
       var href = $(this).attr('href');
       if (href && href.startsWith('#')) {
@@ -65,6 +61,7 @@ $(document).ready(function () {
         }
       }
     });
+    
     // If at the top, highlight the first tab
     if (!found) {
       $tabs.removeClass('active');
@@ -72,29 +69,28 @@ $(document).ready(function () {
     }
   }
 
-  function initAnchorTabs() {
-    setActiveTabAnchors();
-    $(window).off('scroll', setActiveTabAnchors).on('scroll', setActiveTabAnchors);
+  function initAnchorTabs(selector) {
+    const handler = () => setActiveTabAnchors(selector);
+    handler();
+    $(window).off('scroll', handler).on('scroll', handler);
   }
 
   // Detect which logic to use
   if ($('.tab a.tablinks').length > 0) {
     // In-page anchor navigation (case study)
-    initAnchorTabs();
+    initAnchorTabs('.tab a.tablinks');
   } else if (document.getElementById('crm-nav')) {
     // If crm-nav is loaded dynamically, observe and initialize
     const observer = new MutationObserver(function() {
       if ($('#crm-nav .tablinks').length > 0) {
-        initAnchorTabs();
+        initAnchorTabs('#crm-nav .tablinks');
       }
     });
     observer.observe(document.getElementById('crm-nav'), { childList: true });
   } else {
     // Global navigation (main pages)
     if (document.getElementById('global-nav')) {
-      const observer = new MutationObserver(function() {
-        setActiveTabGlobal();
-      });
+      const observer = new MutationObserver(setActiveTabGlobal);
       observer.observe(document.getElementById('global-nav'), { childList: true });
     } else {
       setActiveTabGlobal();
@@ -103,11 +99,9 @@ $(document).ready(function () {
 
   // Observe redesign-nav for dynamic loading
   if (document.getElementById('redesign-nav')) {
-    const observer = new MutationObserver(function() {
-      setActiveTabAnchorsRedesign();
-    });
+    const observer = new MutationObserver(() => initAnchorTabs('#redesign-nav .tablinks'));
     observer.observe(document.getElementById('redesign-nav'), { childList: true });
-    $(window).off('scroll', setActiveTabAnchorsRedesign).on('scroll', setActiveTabAnchorsRedesign);
+    initAnchorTabs('#redesign-nav .tablinks');
   }
 
   // Smooth scroll for in-page anchor links
@@ -121,15 +115,8 @@ $(document).ready(function () {
     }
   });
 
-  // Prevent click on active tab (global navigation)
-  $(document).on('click', '.tab a.active', function(e) {
-    e.preventDefault();
-    e.stopImmediatePropagation();
-    return false;
-  });
-
-  // Prevent click on active tab in redesign-nav
-  $(document).on('click', '#redesign-nav .tablinks.active', function(e) {
+  // Prevent click on any active tab
+  $(document).on('click', '.tab a.active, .tablinks.active', function(e) {
     e.preventDefault();
     e.stopImmediatePropagation();
     return false;
@@ -182,19 +169,40 @@ $(function() {
 window.myFunction = function() {
   var nav = document.getElementById("mobile-nav");
   if (!nav) return;
-  // If nav is not loaded, fetch and show it
+  
   if (nav.innerHTML.trim() === "") {
-    fetch('nav/global-nav.html')
-      .then(res => res.text())
+    // Get the base path based on current location
+    var navPath = 'nav/global-nav.html';
+    if (window.location.pathname.includes('/case-study/')) {
+      navPath = '../nav/global-nav.html';
+    }
+    
+    fetch(navPath)
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to load nav');
+        return res.text();
+      })
       .then(html => {
         nav.innerHTML = html;
         nav.style.display = "block";
+        // Update active state
+        var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        var links = nav.getElementsByTagName('a');
+        for (var i = 0; i < links.length; i++) {
+          if (links[i].getAttribute('href') === currentPage) {
+            links[i].classList.add('active');
+          }
+        }
         enableMobileNavCloseOnClickOutside();
+      })
+      .catch(err => {
+        console.error('Failed to load navigation:', err);
       });
   } else {
-    // Always show nav when Menu is clicked
-    nav.style.display = "block";
-    enableMobileNavCloseOnClickOutside();
+    nav.style.display = nav.style.display === "block" ? "none" : "block";
+    if (nav.style.display === "block") {
+      enableMobileNavCloseOnClickOutside();
+    }
   }
 }
 

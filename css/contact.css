@@ -36,10 +36,12 @@ a img {
   margin: 1rem 0;
 }
 
-/* snakebar style */
+/* snackbar style */
 #snackbar {
   position: fixed;
   bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
   display: flex;
   align-items: center;
@@ -65,8 +67,7 @@ a img {
   height: 24px;
 }
 
-/*Rippe effect & Available for work start*/
-
+/* Ripple effect & Available for work start */
 .right {
   gap: 1rem;
 }
@@ -112,38 +113,33 @@ a img {
     transform: scale(3);
   }
 }
+/* Ripple effect & Available for work end */
 
-/*Rippe effect & Available for work end*/
-
+/* Updated animations for bottom center positioning */
 @keyframes fadein {
   from {
-    transform: translateY(20px);
     opacity: 0;
+    transform: translate(-50%, 20px);
   }
   to {
-    transform: translateY(0);
     opacity: 1;
+    transform: translate(-50%, 0);
   }
 }
 
 @keyframes fadeout {
   from {
-    transform: translateY(0);
     opacity: 1;
+    transform: translate(-50%, 0);
   }
   to {
-    transform: translateY(20px);
     opacity: 0;
+    transform: translate(-50%, 20px);
   }
 }
 
 /* Responsive Styles */
 @media only screen and (max-width: 768px) {
-  #snackbar {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
   .horizontal-divider {
     width: 100%;
   }

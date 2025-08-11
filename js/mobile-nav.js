@@ -1,8 +1,13 @@
 // Load mobile navigation
 document.addEventListener('DOMContentLoaded', function() {
   // First load the mobile nav structure
-  fetch('/nav/mobile-nav.html')
-    .then(res => res.text())
+  fetch('nav/mobile-nav.html')
+    .then(res => {
+      if (!res.ok) {
+        throw new Error('Navigation file not found');
+      }
+      return res.text();
+    })
     .then(html => {
       document.body.insertAdjacentHTML('afterbegin', html);
       

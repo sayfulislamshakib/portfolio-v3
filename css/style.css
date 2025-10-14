@@ -100,6 +100,7 @@ img {
 .navbar img {
   width: 2.375rem;
   height: 2.375rem;
+  overflow: visible;
 }
 
 /* Container Styles */

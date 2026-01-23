@@ -44,7 +44,7 @@
 
   --font-weight-regular: 400;
   --font-weight-medium: 500;
-  --font-weight-semibold: 600;
+  --font-weight-semibold: 500;
 
   /* Line height */
 
@@ -52,6 +52,7 @@
   --font-line-height-multi-line: 1.8rem;
   --font-line-height-base-line: 100%;
 }
+
 /* variables end */
 
 /* Universal Style */
@@ -60,7 +61,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--font-family);
+  letter-spacing: 0.02em;
   scrollbar-gutter: stable;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--text-primary),
+    0 0 0 5px rgba(30, 30, 30, 0.1);
 }
 
 /* Text hightlight */
@@ -105,16 +113,19 @@ img {
 
 /* Container Styles */
 .container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 10.75rem 1fr 10.75rem;
+  /* Left Sidebar | Content | Right Balance */
   gap: 5rem;
   align-items: flex-start;
-  justify-content: flex-start;
-  padding: 5rem 0;
+  margin: 5rem auto;
   position: relative;
-  width: 56.875rem;
+  width: 90%;
+  max-width: 75rem;
+  /* Increased to accommodate the 3rd column */
   z-index: 1;
-  overflow: visible; /* Ensure sticky children work */
+  overflow: visible;
+  /* Ensure sticky children work */
 }
 
 /* Right Column Styles */
@@ -124,8 +135,6 @@ img {
   gap: 3rem;
   justify-content: center;
   position: relative;
-  width: 43rem;
-  padding-bottom: 200px;
 }
 
 /* Header Text Styles */
@@ -141,26 +150,36 @@ img {
   width: 100%;
 }
 
-.header-text img {
+/* Profile Header - Image and Name Section */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.profile-header img {
   width: 124px;
   height: 124px;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
-.home-header{
+.home-header {
   display: flex;
   flex-direction: column;
   gap: 0;
 }
 
-.designation-text{
+.designation-text {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   color: var(--text-secondary);
 }
 
 /* Tab Styles */
-.tab, .crm-nav {
+.tab,
+.crm-nav {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -175,12 +194,12 @@ img {
   z-index: 1;
 }
 
-.tab a:hover{
+.tab a:hover {
   background-color: var(--color-elevated);
   border-radius: 0.5rem;
 }
 
-.tab div{
+.tab div {
   width: 100%;
 }
 
@@ -195,7 +214,11 @@ img {
   cursor: pointer;
   font-size: var(--font-size-md);
   padding: 2px 8px;
+  border-radius: 0.5rem;
 }
+
+
+
 .menu {
   display: none;
 }
@@ -207,6 +230,7 @@ img {
   background-color: var(--color-elevated);
   border-radius: 0.5rem;
 }
+
 /* Tab Content Styles */
 .tabcontent {
   float: left;
@@ -216,8 +240,9 @@ img {
   height: 18.75rem;
 }
 
-.back-button{
+.back-button {
   cursor: pointer;
+  border-radius: 6.25rem;
 }
 
 /* Text Styles */
@@ -250,10 +275,12 @@ img {
   color: var(--text-secondary);
   line-height: var(--font-line-height-multi-line);
 }
+
 .bio-text a {
   text-decoration: none;
   color: var(--text-secondary);
 }
+
 .bio-text a:hover {
   text-decoration: underline;
 }
@@ -357,7 +384,7 @@ button img {
   border-radius: 0.5rem;
 }
 
-.post-thumbnail > img {
+.post-thumbnail>img {
   border-radius: 0.5rem;
 }
 
@@ -392,6 +419,7 @@ button img {
 .post-footer {
   margin-bottom: 1rem;
 }
+
 /* Back Button Styles */
 .back {
   transition: 0.3s;
@@ -421,7 +449,8 @@ video {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 999; /* Ensure link is clickable */
+  z-index: 999;
+  /* Ensure link is clickable */
 }
 
 /* Hide default link styling */
@@ -507,6 +536,7 @@ video {
     opacity: 0;
     transform: translateY(0.5rem);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -527,7 +557,14 @@ video {
   justify-content: center;
   align-items: center;
 }
-.thumbnail > .popup-image {
+
+.thumbnail>.popup-image {
   width: 100%;
   margin: 0 auto;
+}
+
+@media (min-width: 69.45rem) {
+  #mobile-nav {
+    display: none !important;
+  }
 }

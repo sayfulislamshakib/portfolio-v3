@@ -1,3 +1,8 @@
+/* ==========================================
+   ABOUT PAGE STYLES
+   ========================================== */
+
+/* About Section - Text Content */
 .about-text {
   display: flex;
   flex-direction: column;
@@ -11,10 +16,12 @@
   color: var(--text-secondary);
 }
 
-.about-bold-text {
+.tldr-text {
   font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
 }
 
+/* About Section - Image Gallery */
 .image-row {
   display: flex;
   gap: 1rem;
@@ -22,9 +29,9 @@
 }
 
 .image-style {
+  width: 336px;
   border: 1px solid var(--color-border-light);
   border-radius: 0.5rem;
-  width: 336px;
 }
 
 .image-style img {
@@ -35,36 +42,33 @@
   object-fit: cover;
 }
 
-
+/* Experience Section */
 .experience-row {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1rem;
   border: 1px solid var(--color-border-light);
   border-radius: 0.5rem;
-  padding: 1rem;
-  gap: 1rem;
 }
 
+/* Company Logo */
+.company-logo img {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+/* Company Details */
 .company-details {
   display: flex;
   flex-direction: column;
+  gap: 4px;
   width: 100%;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
 }
 
-.company-logo img {
-  width: 40px;
-  height: 40px;
-}
-
-.company-name {
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-semibold);
-  color: var(--text-primary);
-}
-
+/* Job Information */
 .job-info {
   display: flex;
   flex-direction: column;
@@ -73,18 +77,12 @@
   color: var(--text-tertiary);
 }
 
-.tldr-text {
-  font-weight: var(--font-weight-semibold);
-  color: var(--text-primary);
-}
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
 
 @media (max-width: 1110px) {
   .image-style {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    overflow: visible;
   }
 }

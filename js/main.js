@@ -11,18 +11,18 @@ $(document).ready(function () {
   // Highlight the active tab for global navigation (filename-based)
   function setActiveTabGlobal() {
     var page = window.location.pathname.split('/').pop().toLowerCase() || 'index.html';
-    
+
     // Handle both global nav and mobile nav
-    $('.tab a, .mobile-tab a, .navigation-option a').each(function() {
+    $('.tab a, .mobile-tab a, .navigation-option a').each(function () {
       var tab = $(this);
       var href = (tab.attr('href') || '').toLowerCase();
-      
+
       // Special case for home page
       if (page === 'index.html' && !href) {
         tab.addClass('active');
         return;
       }
-      
+
       // Remove active from non-matching tabs
       if (href !== page) {
         tab.removeClass('active');
@@ -33,7 +33,7 @@ $(document).ready(function () {
   }
 
   // Ensure active states are set whenever navigation happens
-  $(document).on('click', '.tab a, .mobile-tab a, .navigation-option a', function() {
+  $(document).on('click', '.tab a, .mobile-tab a, .navigation-option a', function () {
     var href = $(this).attr('href');
     if (href && !href.startsWith('#')) {
       // Small delay to ensure DOM is ready after navigation
@@ -46,7 +46,14 @@ $(document).ready(function () {
     var $tabs = $(selector);
     var scrollPos = $(window).scrollTop();
     var found = false;
-    
+
+    // Check if we're at the bottom of the page
+    if ((window.innerHeight + Math.ceil(scrollPos)) >= document.body.offsetHeight) {
+      $tabs.removeClass('active');
+      $tabs.last().addClass('active');
+      return;
+    }
+
     $tabs.each(function () {
       var href = $(this).attr('href');
       if (href && href.startsWith('#')) {
@@ -61,7 +68,7 @@ $(document).ready(function () {
         }
       }
     });
-    
+
     // If at the top, highlight the first tab
     if (!found) {
       $tabs.removeClass('active');
@@ -81,7 +88,7 @@ $(document).ready(function () {
     initAnchorTabs('.tab a.tablinks');
   } else if (document.getElementById('crm-nav')) {
     // If crm-nav is loaded dynamically, observe and initialize
-    const observer = new MutationObserver(function() {
+    const observer = new MutationObserver(function () {
       if ($('#crm-nav .tablinks').length > 0) {
         initAnchorTabs('#crm-nav .tablinks');
       }
@@ -116,7 +123,7 @@ $(document).ready(function () {
   });
 
   // Prevent click on any active tab
-  $(document).on('click', '.tab a.active, .tablinks.active', function(e) {
+  $(document).on('click', '.tab a.active, .tablinks.active', function (e) {
     e.preventDefault();
     e.stopImmediatePropagation();
     return false;
@@ -136,7 +143,7 @@ function copyText() {
 
 // Current jobs date calculator
 // Date calculator
-$(function() {
+$(function () {
   const startDate = new Date("2022-11-01"); // Start date: November 2022
   const today = new Date(); // Current date
 
@@ -165,59 +172,4 @@ $(function() {
   }
 });
 
-// Function to toggle the display of a div
-window.myFunction = function() {
-  var nav = document.getElementById("mobile-nav");
-  if (!nav) return;
-  
-  if (nav.innerHTML.trim() === "") {
-    // Get the base path based on current location
-    var navPath = 'nav/global-nav.html';
-    if (window.location.pathname.includes('/case-study/')) {
-      navPath = '../nav/global-nav.html';
-    }
-    
-    fetch(navPath)
-      .then(res => {
-        if (!res.ok) throw new Error('Failed to load nav');
-        return res.text();
-      })
-      .then(html => {
-        nav.innerHTML = html;
-        nav.style.display = "block";
-        // Update active state
-        var currentPage = window.location.pathname.split('/').pop() || 'index.html';
-        var links = nav.getElementsByTagName('a');
-        for (var i = 0; i < links.length; i++) {
-          if (links[i].getAttribute('href') === currentPage) {
-            links[i].classList.add('active');
-          }
-        }
-        enableMobileNavCloseOnClickOutside();
-      })
-      .catch(err => {
-        console.error('Failed to load navigation:', err);
-      });
-  } else {
-    nav.style.display = nav.style.display === "block" ? "none" : "block";
-    if (nav.style.display === "block") {
-      enableMobileNavCloseOnClickOutside();
-    }
-  }
-}
 
-function enableMobileNavCloseOnClickOutside() {
-  document.removeEventListener('mousedown', handleMobileNavOutsideClick);
-  setTimeout(function() {
-    document.addEventListener('mousedown', handleMobileNavOutsideClick);
-  }, 0);
-}
-
-function handleMobileNavOutsideClick(e) {
-  var nav = document.getElementById("mobile-nav");
-  var menu = document.querySelector('.mobile-menu');
-  if (!nav || nav.style.display !== "block") return;
-  if (nav.contains(e.target) || (menu && menu.contains(e.target))) return;
-  nav.style.display = "none";
-  document.removeEventListener('mousedown', handleMobileNavOutsideClick);
-}

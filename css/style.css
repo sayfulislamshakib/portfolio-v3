@@ -564,16 +564,18 @@ video {
     display: none !important;
   }
 
-  #global-nav {
+  #global-nav,
+  #crm-nav {
     display: block;
     position: fixed;
     top: 5rem;
-    left: calc((100vw - min(75rem, 90vw)) / 2);
+    left: max(5%, calc((100% - 75rem) / 2));
     width: 10.75rem;
     z-index: 1000;
   }
 
-  #global-nav .tab {
+  #global-nav .tab,
+  #crm-nav .tab {
     position: relative;
     top: auto;
     padding: 0.5rem;
@@ -584,14 +586,31 @@ video {
     isolation: isolate;
   }
 
-  #global-nav .tab::before {
+  #global-nav .tab::before,
+  #crm-nav .tab::before {
     content: "";
     position: absolute;
     inset: 0;
+    border: 1px solid var(--color-border-light);
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(0.5rem);
+    -webkit-backdrop-filter: blur(0.5rem);
+    box-shadow: 0 0.5rem 2rem rgba(30, 30, 30, 0.08);
+    pointer-events: none;
     z-index: -1;
   }
 
-  #global-nav .tab > * {
+  #global-nav .tab::before {
+    content: none;
+  }
+
+  #crm-nav .tab::before {
+    content: none;
+  }
+
+  #global-nav .tab > *,
+  #crm-nav .tab > * {
     position: relative;
     z-index: 1;
   }
